@@ -1,12 +1,41 @@
-import React, {useState, useEffect} from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from 'react';
+import { experimentalStyled as styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Login from './Login';
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(2),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
 const Home = () => {
+  const [auth, setAuth] = useState(true);
+  //If user is logged in stay on home/mood screen
+  //If user is not logged in navigate to login screen
 
   return (
-    <div className="home-div">
-
-    </div>
+    <>
+      {auth && (
+        <div className="home-div">
+          <h1>What's your mood today?</h1>
+          <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+              {Array.from(Array(6)).map((_, index) => (
+                <Grid item xs={2} sm={4} md={4} key={index}>
+                  <Item>xs=2</Item>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        </div>
+      )}
+      {!auth && <Login></Login>}
+    </>
   )
 };
 
