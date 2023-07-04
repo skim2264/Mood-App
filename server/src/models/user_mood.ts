@@ -7,4 +7,4 @@ const UserMoodSchema = new Schema({
 
 type UserMood = InferSchemaType<typeof UserMoodSchema>;
 
-export default model<UserMood>("Mood", UserMoodSchema);
+export default model<UserMood>("UserMood", UserMoodSchema);

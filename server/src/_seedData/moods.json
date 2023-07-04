@@ -1,0 +1,14 @@
+[
+  {
+    "mood": "happy",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/smiley-icon.svg",
+    "color": "green",
+    "recommendations": "['see your friends', 'This song']"
+  },
+  {
+    "mood": "sad",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
+    "color": "red",
+    "recommendations": "['take a walk', 'This song']"
+  }
+]

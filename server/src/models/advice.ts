@@ -1,7 +1,8 @@
 import { InferSchemaType, model, Schema } from "mongoose";
 
 const TodoSchema = new Schema({
-  todo: { type: String, required: true },
+  title: { type: String, required: true },
+  description: {type: String, required: true},
   image: { type: String, required: true},
   mood: { type: String, required: true}
 });

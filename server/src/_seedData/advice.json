@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Go for a walk",
+    "description": "Sometimes a short 10min walk and some fresh air can clear your mind.",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "sad"
+  },
+  {
+    "title": "Watch a fun movie",
+    "description": "A comedic movie can keep up your already great mood!",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "happy"
+  }
+]
