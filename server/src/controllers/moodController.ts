@@ -2,6 +2,7 @@ import { RequestHandler } from "express";
 import MoodModel from "../models/mood";
 import UserMoodModel from "../models/user_mood";
 import createHttpError from "http-errors";
+import { assertIsDefined } from "../util/assertIsDefined";
 
 export const getAllMoods: RequestHandler = async(req, res, next) => {
   try {
@@ -26,11 +27,15 @@ interface addTodayMood {
 }
 
 export const addMood: RequestHandler<unknown, unknown, addTodayMood, unknown> = async(req, res, next) => {
+  const authenticatedUserId = req.session.userId;
+
   const day = req.body.day;
   const mood = req.body.mood;
 
   //get user and append todayMood to moodsList
   try {
+    assertIsDefined(authenticatedUserId);
+    
     if (!mood || !day) {
       throw createHttpError(400);
     }
