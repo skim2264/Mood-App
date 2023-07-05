@@ -10,5 +10,17 @@
     "description": "A comedic movie can keep up your already great mood!",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
     "mood": "happy"
+  },
+  {
+    "title": "Happy 1 Advice",
+    "description": "A comedic movie can keep up your already great mood!",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "happy"
+  },
+  {
+    "title": "Happy 2 Advice",
+    "description": "A comedic movie can keep up your already great mood!",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "happy"
   }
 ]

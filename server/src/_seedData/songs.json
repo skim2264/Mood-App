@@ -12,5 +12,19 @@
     "link": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
     "mood": "happy"
+  },
+  {
+    "title": "Song 1 happy",
+    "artist": "Bruno Mars",
+    "link": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "happy"
+  },
+  {
+    "title": "Song 2 happy",
+    "artist": "Bruno Mars",
+    "link": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "happy"
   }
 ]
