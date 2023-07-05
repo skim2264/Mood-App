@@ -60,12 +60,13 @@ export const addMood: RequestHandler<unknown, unknown, addTodayMood, unknown> = 
   try {
     assertIsDefined(authenticatedUserId);
 
-    if (!mood || !day) {
+    if (!mood) {
       throw createHttpError(400);
     }
     
     //create user_mood in mongoose
     const todayMood = await UserMoodModel.create({
+      userId: authenticatedUserId,
       day: day,
       mood: mood,
     });

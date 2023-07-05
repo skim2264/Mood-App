@@ -4,10 +4,10 @@ import * as profileController from "../controllers/profileController";
 const router = express.Router();
 
 //Delete Mood
-router.delete("/", profileController.deleteMood);
+router.delete("/:date", profileController.deleteMood);
 
 //Edit Mood
-router.put("/", profileController.editMood);
+router.put("/:date", profileController.editMood);
 
 //Get Mood
 router.get("/:date", profileController.getMood);

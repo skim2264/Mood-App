@@ -1,6 +1,8 @@
 import { InferSchemaType, model, Schema } from "mongoose";
 
+//maybe delete timestamps?
 const UserMoodSchema = new Schema({
+  userId: { type: Schema.Types.ObjectId, ref: "User", required: true},
   day: { type: Date, require: true },
   mood: { type: String, required: true }
 }, {timestamps: true});

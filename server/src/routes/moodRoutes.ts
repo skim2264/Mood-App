@@ -10,6 +10,6 @@ router.get("/", moodController.getAllMoods);
 router.get("/:mood", moodController.getRec);
 
 //Post Mood
-router.post("/:mood", moodController.addMood);
+router.post("/", moodController.addMood);
 
 export default router; 
