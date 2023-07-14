@@ -1,26 +1,142 @@
 [
   {
+    "quote": "Happiness is not something you postpone for the future; it is something you design for the present.",
+    "author": "Jim Rohn",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "happy",
+    "rectype": "quote"
+  },
+  {
+    "quote": "The greatest happiness you can have is knowing that you do not necessarily require happiness.",
+    "author": "William Saroyan",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "happy",
+    "rectype": "quote"
+  },
+  {
+    "quote": "Courage is not the absence of fear, but the triumph over it.",
+    "author": "Nelson Mandela",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "courageous",
+    "rectype": "quote"
+  },
+  {
+    "quote": "Courage is resistance to fear, mastery of fear, not absence of fear.",
+    "author": "Mark Twain",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "courageous",
+    "rectype": "quote"
+  },
+  {
+    "quote": "Being deeply loved by someone gives you strength while loving someone deeply gives you courage.",
+    "author": "Lao Tzu",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "love",
+    "rectype": "quote"
+  },
+  {
+    "quote": "Love is not finding someone to live with, it's finding someone you can't live without.",
+    "author": "Rafael Ortiz",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "love",
+    "rectype": "quote"
+  },
+  {
+    "quote": "Do not let the behavior of others destroy your inner peace.",
+    "author": "Dalai Lama",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "annoyed",
+    "rectype": "quote"
+  },
+  {
+    "quote": "It's not what happens to you, but how you react to it that matters.",
+    "author": "Epictetus",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "annoyed",
+    "rectype": "quote"
+  },
+  {
+    "quote": "Forgive yourself for not knowing what you didn't know before you learned it.",
+    "author": "Maya Angelou",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "guilty",
+    "rectype": "quote"
+  },
+  {
+    "quote": "Maybe there's more we all could have done, but we just have to let the guilt remind us to do better next time.",
+    "author": "Veronica Roth",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "guilty",
+    "rectype": "quote"
+  },
+  {
+    "quote": "Do not be embarrassed by your failures, learn from them and start again.",
+    "author": "Richard Branson",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "embarrassed",
+    "rectype": "quote"
+  },
+  {
+    "quote": "If you are never scared, embarrassed, or hurt, it means you never take chances.",
+    "author": "Julia Soul",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "embarrassed",
+    "rectype": "quote"
+  },
+  {
+    "quote": "The greatest healing therapy is friendship and love.",
+    "author": "Hubert H. Humphrey",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "sick",
+    "rectype": "quote"
+  },
+  {
+    "quote": "The greatest wealth is health.",
+    "author": "Virgil",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "sick",
+    "rectype": "quote"
+  },
+  {
+    "quote": "The sun is a daily reminder that we too can rise again from the darkness, that we too can shine our own light.",
+    "author": "S. Ajna",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "sad",
+    "rectype": "quote"
+  },
+  {
     "quote": "If you change the way you look at things, the things you look at change.",
     "author": "Wayne Dyer",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "sad"
+    "mood": "sad",
+    "rectype": "quote"
   },
   {
-    "quote": "Life is like riding a bicycle. To keep your balance, you must keep moving.",
-    "author": "Albert Einstein",
+    "quote": "When anger arises, think of the consequences.",
+    "author": "Confucius",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "happy"
+    "mood": "angry",
+    "rectype": "quote"
   },
   {
-    "quote": "Quote 1 happy",
-    "author": "Albert Einstein",
+    "quote": "Anger is an acid that can do more harm to the vessel in which it is stored than to anything on which it is poured.",
+    "author": "Mark Twain",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "happy"
+    "mood": "angry",
+    "rectype": "quote"
   },
   {
-    "quote": "Quote 2 happy",
-    "author": "Albert Einstein",
+    "quote": "The eternal quest of the human being is to shatter his loneliness.",
+    "author": "Norman Cousins",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "happy"
+    "mood": "lonely",
+    "rectype": "quote"
+  },
+  {
+    "quote": "The greatest thing in the world is to know how to belong to oneself.",
+    "author": "Michel de Montaigne",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "lonely",
+    "rectype": "quote"
   }
 ]

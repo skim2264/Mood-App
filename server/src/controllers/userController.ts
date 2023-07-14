@@ -13,18 +13,20 @@ export const getAuthenticatedUser: RequestHandler = async (req, res, next) => {
 }
 
 interface SignUpBody {
-  name?: string,
+  firstname?: string,
+  lastname?: string,
   username?: string,
   password?: string
 }
 
 export const signup: RequestHandler<unknown, unknown, SignUpBody, unknown> = async(req, res, next) => {
-  const name = req.body.name;
+  const firstname = req.body.firstname;
+  const lastname = req.body.lastname;
   const username = req.body.username;
   const password = req.body.password;
 
   try {
-    if (!name || !username || !password) {
+    if (!firstname || !username || !password) {
       throw createHttpError(400, "Parameters missing");
     }
 
@@ -37,7 +39,8 @@ export const signup: RequestHandler<unknown, unknown, SignUpBody, unknown> = asy
     const passwordHashed = await bcrypt.hash(password, 10);
 
     const newUser = await UserModel.create({
-      name: name,
+      firstname: firstname,
+      lastname: lastname,
       username: username,
       password: passwordHashed
     });

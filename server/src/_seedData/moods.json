@@ -2,13 +2,51 @@
   {
     "mood": "happy",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/smiley-icon.svg",
-    "color": "green",
-    "recommendations": "['see your friends', 'This song']"
+    "color": "green"
+  },
+  {
+    "mood": "courageous",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
+    "color": "green"
+  },
+  {
+    "mood": "love",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
+    "color": "green"
+  },
+  {
+    "mood": "annoyed",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
+    "color": "yellow"
+  },
+  {
+    "mood": "guilty",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
+    "color": "yellow"
+  },
+  {
+    "mood": "embarrassed",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
+    "color": "yellow"
+  },
+  {
+    "mood": "sick",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
+    "color": "red"
   },
   {
     "mood": "sad",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
-    "color": "red",
-    "recommendations": "['take a walk', 'This song']"
+    "color": "red"
+  },
+  {
+    "mood": "angry",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
+    "color": "red"
+  },
+  {
+    "mood": "lonely",
+    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
+    "color": "red"
   }
 ]

@@ -76,7 +76,7 @@ export const addMood: RequestHandler<unknown, unknown, addTodayMood, unknown> = 
     user?.moodsList.push(todayMood._id);
     await user?.save();
 
-    res.status(201).json(user);
+    res.status(201).json(todayMood);
   } catch (error) {
     next(error);
   }

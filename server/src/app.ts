@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express, { NextFunction, Request, Response } from "express";
 import morgan from "morgan";
+import cors from "cors";
 import moodRoutes from "./routes/moodRoutes";
 import userRoutes from "./routes/userRoutes";
 import profileRoutes from "./routes/profileRoutes";
@@ -17,6 +18,8 @@ app.use(morgan("dev"));
 
 app.use(express.json());
 
+app.use(cors());
+
 app.use(session({
   secret: env.SESSION_SECRET,
   resave: false,
@@ -31,7 +34,7 @@ app.use(session({
 }))
 
 //routes
-app.use("/api/mood", requiresAuth, moodRoutes);
+app.use("/api/mood", moodRoutes);
 app.use("/api/profile", requiresAuth, profileRoutes);
 app.use("/api/users", userRoutes);
 

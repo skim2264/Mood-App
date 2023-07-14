@@ -5,7 +5,8 @@ const SongSchema = new Schema({
   artist: { type: String, required: true},
   link: { type: String, required: true},
   image: { type: String},
-  mood: { type: String, required: true}
+  mood: { type: String, required: true},
+  rectype: { type: String, required: true}
 });
 
 type Song = InferSchemaType<typeof SongSchema>;

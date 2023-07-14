@@ -1,12 +1,13 @@
 import { InferSchemaType, model, Schema } from "mongoose";
 
-const TodoSchema = new Schema({
+const AdviceSchema = new Schema({
   title: { type: String, required: true },
   description: {type: String, required: true},
   image: { type: String, required: true},
-  mood: { type: String, required: true}
+  mood: { type: String, required: true},
+  rectype: { type: String, required: true}
 });
 
-type Todo = InferSchemaType<typeof TodoSchema>;
+type Advice = InferSchemaType<typeof AdviceSchema>;
 
-export default model<Todo>("Todo", TodoSchema);
+export default model<Advice>("Advice", AdviceSchema);

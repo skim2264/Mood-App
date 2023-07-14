@@ -7,7 +7,6 @@ import fs from "fs";
 
 //Import data to MongoDB
 const moodData = JSON.parse(fs.readFileSync(`${__dirname}/_seedData/moods.json`, 'utf-8'));
-console.log(moodData);
 
 //save a song
 const adviceData = JSON.parse(fs.readFileSync(`${__dirname}/_seedData/advice.json`, 'utf-8'));
