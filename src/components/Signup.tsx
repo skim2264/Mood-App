@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,7 +10,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import * as MoodAPI from "../network/mood_api";
+import { Controller, useForm } from 'react-hook-form';
+import { User } from "../models/user";
 
 function Copyright(props: any) {
   return (
@@ -28,14 +31,26 @@ function Copyright(props: any) {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function Signup() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+interface SignupProps {
+  onSignupSuccess: (user: User) => void,
+}
+//have a return that sign up was successful - navigate to main page
+
+export default function Signup({onSignupSuccess}: SignupProps) {
+  const navigate = useNavigate();
+  const { control, handleSubmit} = useForm<MoodAPI.SignUpCredentials>();
+
+  const signUpSubmit = async (input: MoodAPI.SignUpCredentials) => {
+    try {
+      const newUser = await MoodAPI.signUp(input);
+      console.log(newUser);
+      onSignupSuccess(newUser);
+      navigate("/home");
+      alert("sign up success");
+    } catch (error) {
+      console.error(error);
+      alert(error);
+    }
   };
 
   return (
@@ -56,49 +71,84 @@ export default function Signup() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate onSubmit={handleSubmit(signUpSubmit)} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="given-name"
-                  name="firstName"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                  autoFocus
+                <Controller 
+                  control={control}
+                  name="firstname"
+                  defaultValue=""
+                  render={({ field }) => (
+                    <TextField
+                      {...field}
+                      autoComplete="given-name"
+                      name="firstName"
+                      required
+                      fullWidth
+                      id="firstName"
+                      label="First Name"
+                      autoFocus
+                    />
+                  )}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
-                />
+                <Controller 
+                    control={control}
+                    name="lastname"
+                    defaultValue=""
+                    render={({ field }) => (
+                      <TextField
+                        {...field}
+                        autoComplete="family-name"
+                        name="lastName"
+                        fullWidth
+                        id="lastName"
+                        label="Last Name"
+                        autoFocus
+                      />
+                    )}
+                  />
               </Grid>
               <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                />
+                <Controller 
+                    control={control}
+                    name="username"
+                    defaultValue=""
+                    render={({ field }) => (
+                      <TextField
+                        {...field}
+                        autoComplete="new-username"
+                        name="username"
+                        required
+                        fullWidth
+                        id="username"
+                        label="Username"
+                        type="username"
+                        autoFocus
+                      />
+                    )}
+                  />
               </Grid>
               <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
-                />
+                <Controller 
+                    control={control}
+                    name="password"
+                    defaultValue=""
+                    render={({ field }) => (
+                      <TextField
+                        {...field}
+                        autoComplete="new-password"
+                        name="password"
+                        required
+                        fullWidth
+                        id="password"
+                        label="Password"
+                        type="password"
+                        autoFocus
+                      />
+                    )}
+                  />
               </Grid>
             </Grid>
             <Button
