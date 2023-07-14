@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,6 +13,9 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import * as MoodAPI from "../network/mood_api";
+import { Controller, useForm } from 'react-hook-form';
+import { User } from "../models/user";
 
 function Copyright(props: any) {
   return (
@@ -28,17 +31,28 @@ function Copyright(props: any) {
 }
 
 // TODO remove, this demo shouldn't need to reset the theme.
-//Add links to signup page
 const defaultTheme = createTheme();
 
-export default function Login() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+interface LoginProps {
+  onLoginSuccess: (user: User) => void,
+}
+
+//have a return that login was successful - navigate to main page
+export default function Login({ onLoginSuccess }: LoginProps) {
+  const navigate = useNavigate();
+
+  const { control, handleSubmit} = useForm<MoodAPI.LoginCredentials>();
+
+  const loginSubmit = async (input: MoodAPI.LoginCredentials) => {
+    try {
+      const user = await MoodAPI.login(input);
+      onLoginSuccess(user);
+      alert("login success");
+      navigate('/home');
+    } catch (error) {
+      console.error(error);
+      alert(error);
+    }
   };
 
   return (
@@ -75,27 +89,44 @@ export default function Login() {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-                autoFocus
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
+            <Box component="form" noValidate onSubmit={handleSubmit(loginSubmit)} sx={{ mt: 1 }}>
+              <Controller 
+                  control={control}
+                  name="username"
+                  defaultValue=""
+                  render={({ field }) => (
+                    <TextField
+                      {...field}
+                      margin="normal"
+                      autoComplete="username"
+                      name="username"
+                      required
+                      fullWidth
+                      id="username"
+                      label="Username"
+                      autoFocus
+                    />
+                  )}
+                />
+                <Controller 
+                  control={control}
+                  name="password"
+                  defaultValue=""
+                  render={({ field }) => (
+                    <TextField
+                      {...field}
+                      margin="normal"
+                      autoComplete="password"
+                      name="password"
+                      required
+                      fullWidth
+                      id="password"
+                      label="Password"
+                      autoFocus
+                      type="password"
+                    />
+                  )}
+                />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
