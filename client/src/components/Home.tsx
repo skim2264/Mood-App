@@ -3,7 +3,6 @@ import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Login from './Login';
 import { Mood as MoodModel } from '../models/mood';
 import { Advice as AdviceModel} from "../models/advice";
 import { Quote as QuoteModel} from "../models/quote";
@@ -27,12 +26,6 @@ interface HomeProps {
 
 const Home = ({loggedInUser, moodList}: HomeProps) => {
   const [rec, setRec] = useState< AdviceModel | SongModel | QuoteModel >();
-  
-  //have the parent (app.tsx) have setState that is passed down to Home and state passed to MoodRec
-  //Pass down the mood and have mood rec fetch from API the recommendation
-  //Toggle visibility of MoodRec after fetched from API and have transition scroll down to Mood Rec screen
-
-  //make a home page? - make an account or run demo where mood isn't saved
 
   useEffect(() => {
     if (rec) {
@@ -46,6 +39,7 @@ const Home = ({loggedInUser, moodList}: HomeProps) => {
       const response = await MoodAPI.getRec(mood);
       setRec(response);
       console.log(response);
+      //only add to user mood to profile if logged in
       if (loggedInUser) {
         await MoodAPI.addUserMood(mood);
       }
@@ -54,7 +48,6 @@ const Home = ({loggedInUser, moodList}: HomeProps) => {
       alert(error);
     }
   }
-  //add if not logged in - login or sign up to save mood rec
 
   return (
     <>

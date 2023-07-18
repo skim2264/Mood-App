@@ -1,43 +1,23 @@
-import * as React from 'react';
+import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import * as MoodAPI from "../network/mood_api";
 import { Controller, useForm } from 'react-hook-form';
 import { User } from "../models/user";
-
-function Copyright(props: any) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
+import Container from '@mui/material/Container';
+import loginImg from "../assets/dreambed.jpg";
+import InputLabel from '@mui/material/InputLabel';
 
 interface LoginProps {
   onLoginSuccess: (user: User) => void,
 }
 
-//have a return that login was successful - navigate to main page
 export default function Login({ onLoginSuccess }: LoginProps) {
   const navigate = useNavigate();
 
@@ -56,106 +36,107 @@ export default function Login({ onLoginSuccess }: LoginProps) {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: '100vh' }}>
-        <CssBaseline />
-        <Grid
-          item
-          xs={false}
-          sm={4}
-          md={7}
+    <Grid container component="main" sx={{ height: '100%' }}>
+      <CssBaseline />
+      <Grid container item xs={false} sm={6} md={5} className='loginImage'>
+        <Container
           sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
-            backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
-        />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-          <Box
-            sx={{
-              my: 8,
-              mx: 4,
+        >
+          <Grid item sx={{ mb: 3, fontSize: '35px', fontWeight: 'bold'}}>mood</Grid>
+          <Grid item><img src={loginImg} alt="Bed in the clouds" id="dreambedImg"/></Grid>
+          <Grid item sx={{ mt: 3, fontSize: '24px', fontWeight:'medium', textAlign:'center'}}>"Believe you can, and you're halfway there."</Grid>
+          <Grid item sx={{ fontSize: '24px', fontWeight:'medium', textAlign:'center'}}>-Theodore Roosevelt</Grid>
+        </Container>
+      </Grid>
+      <Grid item xs={12} sm={6} md={7} component={Paper} elevation={6} square>
+        <Box
+          sx={{
+            my: 8,
+            mx: 4,
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <Typography component="h1" variant="h2" sx={{mb: 4}}>
+            SIGN IN
+          </Typography>
+          <Box component="form" noValidate onSubmit={handleSubmit(loginSubmit)} 
+            sx={{ 
+              mt: 1,
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-              <LockOutlinedIcon />
-            </Avatar>
-            <Typography component="h1" variant="h5">
-              Sign in
-            </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit(loginSubmit)} sx={{ mt: 1 }}>
-              <Controller 
-                  control={control}
-                  name="username"
-                  defaultValue=""
-                  render={({ field }) => (
-                    <TextField
-                      {...field}
-                      margin="normal"
-                      autoComplete="username"
-                      name="username"
-                      required
-                      fullWidth
-                      id="username"
-                      label="Username"
-                      autoFocus
-                    />
-                  )}
-                />
-                <Controller 
-                  control={control}
-                  name="password"
-                  defaultValue=""
-                  render={({ field }) => (
-                    <TextField
-                      {...field}
-                      margin="normal"
-                      autoComplete="password"
-                      name="password"
-                      required
-                      fullWidth
-                      id="password"
-                      label="Password"
-                      autoFocus
-                      type="password"
-                    />
-                  )}
-                />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
+          }}>
+            <InputLabel htmlFor="username"><Typography variant='h3'>Username</Typography></InputLabel>
+            <Controller 
+                control={control}
+                name="username"
+                defaultValue=""
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    margin="normal"
+                    autoComplete="username"
+                    name="username"
+                    required
+                    fullWidth
+                    id="username"
+                    label="Username"
+                    autoFocus
+                    InputProps={{
+                      style: {
+                        borderRadius: "50px"
+                      }
+                    }}
+                    sx={{mb: 3}}
+                  />
+                )}
               />
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                Sign In
-              </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <NavLink to="/signup">
-                    {"Don't have an account? Sign Up"}
-                  </NavLink>
-                </Grid>
-              </Grid>
-              <Copyright sx={{ mt: 5 }} />
-            </Box>
+              <InputLabel htmlFor="password"><Typography variant='h3'>Password</Typography></InputLabel>
+              <Controller 
+                control={control}
+                name="password"
+                defaultValue=""
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    margin="normal"
+                    autoComplete="password"
+                    name="password"
+                    required
+                    fullWidth
+                    id="password"
+                    label="Password"
+                    autoFocus
+                    type="password"
+                    InputProps={{
+                      style: {
+                        borderRadius: "50px",
+                      }
+                    }}
+                  />
+                )}
+              />
+            <Button
+              type="submit"
+              variant="contained"
+              sx={{ mt: 3, mb: 2, backgroundColor: 'white', borderRadius: 50, width: 150, alignSelf:'center' }}
+              className="gradient-button"
+            >
+              <Typography variant="body1">Sign In</Typography>
+            </Button>
+            <Grid item sx={{mt: 2, alignSelf: 'center'}}>
+              <NavLink to="/signup">
+                {"Don't have an account? Sign Up"}
+              </NavLink>
+            </Grid>
           </Box>
-        </Grid>
+        </Box>
       </Grid>
-    </ThemeProvider>
+    </Grid>
   );
 }
