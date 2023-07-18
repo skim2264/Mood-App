@@ -27,13 +27,21 @@ const theme = createTheme({
     },
     h2: {
       fontWeight: 700,
-      fontSize: '2.5rem',
+      fontSize: '2rem',
     },
     h3: {
       fontWeight: 500,
       fontSize: '1.5rem',
+    },
+    body2: {
+      fontStyle: 'oblique'
     }
   },
+  palette: {
+    secondary: {
+      main: "rgb(255,255,255)"
+    }
+  }
 });
 
 function App() {
@@ -42,7 +50,7 @@ function App() {
 
   const [loggedInUser, setLoggedInUser] = useState<User | null>(null);
 
-  const [moodList, setMoodList] = useState<Mood[]>([]);
+/*   const [moodList, setMoodList] = useState<Mood[]>([]);
 
   //load the mood list from the API
   useEffect(() => {
@@ -57,7 +65,7 @@ function App() {
     }
 
     loadMoodList();
-  }, []);
+  }, []); */
 
   //get logged in user
   useEffect(() => {
@@ -83,7 +91,7 @@ function App() {
           />
           <Routes>
             <Route path="/" element={<Welcome></Welcome>}></Route>
-            <Route path="/home" element={<Home moodList={moodList} loggedInUser={loggedInUser}></Home>}></Route>
+            <Route path="/home" element={<Home loggedInUser={loggedInUser}></Home>}></Route>
             <Route path="/login" element={<Login onLoginSuccess={(user) => setLoggedInUser(user)}></Login>}></Route>
             <Route path="/signup" element={<Signup onSignupSuccess={(user) => setLoggedInUser(user)}></Signup>}></Route>
             <Route path="/profile" element={<Profile></Profile>}></Route>

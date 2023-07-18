@@ -10,22 +10,24 @@ import { Song as SongModel} from "../models/song";
 import { User } from "../models/user";
 import MoodRec from './MoodRec';
 import * as MoodAPI from '../network/mood_api';
+import { Typography } from '@mui/material';
+import { moodList } from '../assets/moodList';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(2),
-  textAlign: 'center',
+  textAlign: 'center', 
   color: theme.palette.text.secondary,
 }));
 
 interface HomeProps {
   loggedInUser: User | null,
-  moodList: MoodModel[],
 }
 
-const Home = ({loggedInUser, moodList}: HomeProps) => {
+const Home = ({loggedInUser}: HomeProps) => {
   const [rec, setRec] = useState< AdviceModel | SongModel | QuoteModel >();
+  const [moodClicked, setMoodClicked] = useState<MoodModel>();
 
   useEffect(() => {
     if (rec) {
@@ -34,7 +36,9 @@ const Home = ({loggedInUser, moodList}: HomeProps) => {
     };
   },[rec])
 
-  const onMoodClicked = async(mood: string) => {
+  const onMoodClicked = async(moodObj: MoodModel) => {
+    setMoodClicked(moodObj);
+    const mood = moodObj.mood.toLowerCase();
     try {
       const response = await MoodAPI.getRec(mood);
       setRec(response);
@@ -52,19 +56,22 @@ const Home = ({loggedInUser, moodList}: HomeProps) => {
   return (
     <>
       <div className="home-div">
-        <h1>What's your mood today?</h1>
+        <Typography variant="h2" sx={{textAlign: 'center', mb: 3}}>What's your mood today?</Typography>
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 10 }}>
+          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 3, sm: 9, md: 12 }}> 
             {moodList.map((mood) => (
-              <Grid item xs={2} key={mood._id}>
-                <Item><img src={mood.image} alt={mood.mood} onClick={(e) => onMoodClicked(mood.mood)}/></Item>
+              <Grid item xs={3} key={mood.mood}>
+                <Item elevation={0}>
+                  <img src={mood.image} alt={mood.mood} className="moodIcon" onClick={(e) => onMoodClicked(mood)}/>
+                  <Typography variant="body1">{mood.mood}</Typography>
+                </Item>
               </Grid>
             ))}
           </Grid>
         </Box>
       </div>
 
-      <MoodRec rec={rec}></MoodRec>
+      {moodClicked && <MoodRec rec={rec} moodClicked={moodClicked}></MoodRec>}
     </>
   )
 };
