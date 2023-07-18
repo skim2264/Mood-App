@@ -10,7 +10,12 @@
   background-size: cover;
   padding: 100px;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+span {
+  font-style: italic;
 }
 
 //Login Page
@@ -37,4 +42,29 @@
 .nav-link {
   text-decoration: none;
   color: white;
+}
+
+//Home Page
+.home-div {
+  border-radius: 20px;
+  opacity: 0.6000000238418579;
+  background: #FFF;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  padding: 50px;
+  margin-bottom: 200px;
+}
+
+.moodIcon {
+  width: 160px;
+}
+
+//Song Rec Page
+.moodrec-div-main {
+  border-radius: 20px;
+  opacity: 0.6000000238418579;
+  background: #FFF;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  height: 70vh;
+  padding: 50px;
 }
