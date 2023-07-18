@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: inter;
+}
+
+.app-div {
+  background-image: url("./assets/main-background.jpg");
+  background-size: cover;
+  padding: 100px;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+//Login Page
+.loginImage {
+  background-color: white;
+  background-image: linear-gradient(rgba(81, 66, 139, 1), rgba(81, 66, 139, .5));
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; 
+}
+
+#dreambedImg {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+//Buttons
+.gradient-button {
+  background-color: white;
+  background-image: linear-gradient(to left, rgba(81, 66, 139, 1), rgba(81, 66, 139, 0.5));
+}
+
+//Navbar 
+.nav-link {
+  text-decoration: none;
+  color: white;
+}

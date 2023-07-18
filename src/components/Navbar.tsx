@@ -73,13 +73,13 @@ export default function Navbar({loggedInUser, onLogoutSuccess}: NavbarProps) {
   }
   
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box sx={{ flexGrow: 1}}>
+      <AppBar position="fixed" color="transparent" elevation={0} sx={{ pl: 2, pt: 2, pr: 2}}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {loggedInUser 
-              ? <NavLink to="/home">Mood</NavLink> 
-              : <NavLink to="/">Mood</NavLink> 
+              ? <NavLink to="/home" className="nav-link">mood</NavLink> 
+              : <NavLink to="/" className="nav-link">mood</NavLink> 
             }
           </Typography>
           
@@ -105,14 +105,17 @@ export default function Navbar({loggedInUser, onLogoutSuccess}: NavbarProps) {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
                 >
-                  <MenuItem onClick={handleClose}><NavLink to="/profile">Profile</NavLink></MenuItem>
-                  <MenuItem onClick={logout}>Logout</MenuItem>
+                  <MenuItem onClick={handleClose}><NavLink to="/profile" className="nav-link">Profile</NavLink></MenuItem>
+                  <MenuItem onClick={logout}><NavLink to="/" className="nav-link">Logout</NavLink></MenuItem>
                 </Menu>
               </div>
             )}
 
           {!loggedInUser && (
-            <Button color="inherit"><NavLink to="/login">Login</NavLink></Button>
+            <>
+              <Button color="inherit"><NavLink to="/login" className="nav-link">Login</NavLink></Button>
+              <Button color="inherit"><NavLink to="/signup" className="nav-link">Signup</NavLink></Button>
+            </>
           )}
         </Toolbar>
       </AppBar>
