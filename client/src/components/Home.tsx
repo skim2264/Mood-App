@@ -61,7 +61,7 @@ const Home = ({loggedInUser}: HomeProps) => {
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 3, sm: 9, md: 12 }}> 
             {moodList.map((mood) => (
               <Grid item xs={3} key={mood.mood}>
-                <Item elevation={0}>
+                <Item elevation={0} sx={{backgroundColor:"transparent"}}>
                   <img src={mood.image} alt={mood.mood} className="moodIcon" onClick={(e) => onMoodClicked(mood)}/>
                   <Typography variant="body1">{mood.mood}</Typography>
                 </Item>
@@ -77,3 +77,6 @@ const Home = ({loggedInUser}: HomeProps) => {
 };
 
 export default Home;
+
+//add alert if they already added a mood for the day - only 1 mood per day 
+//in demo mood add a - login in or signup to add ur mood now, and add to database if they login or sign up

@@ -8,6 +8,7 @@ import FastRewindIcon from '@mui/icons-material/FastRewind';
 import FastForwardIcon from '@mui/icons-material/FastForward';
 
 import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
+import { NavLink } from "react-router-dom";
 
  interface MoodRecProps {
   rec: SongModel,
@@ -22,6 +23,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
       <Grid container component="main" className="moodrec-div-main" id="songrec">
         <CssBaseline/>
         <Grid container item 
+          className="song-div-left rec-padding"
           sm={6} 
           sx={{
             display: 'flex',
@@ -35,7 +37,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-              <img src={moodClicked.image} alt={moodClicked.mood} className="moodIcon" ></img>
+              <img src={moodClicked.image} alt={moodClicked.mood} className="moodIconSmall" ></img>
               <Typography variant="h3" sx={{mt: 2}}>YOUR MOOD IS <span style={{color:`${moodClicked.color}`}}>{moodClicked.mood.toLowerCase()}</span></Typography>
             </Grid>
             <Grid item sx={{textAlign: 'center', mt: 3}}>
@@ -44,6 +46,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
         </Grid>
 
         <Grid container item 
+          className="song-div-right rec-padding"
           sm={6} 
           sx={{
             display: 'flex',
@@ -87,8 +90,9 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
           </Grid>
         </Grid>
       </Grid>
+
       <Container sx={{textAlign: 'center', mt: 3}}>
-        <Typography variant="body1">Your mood has been recorded in your profile.</Typography>
+        <Typography variant="body1">Your mood has been recorded in your <NavLink to="/profile">profile.</NavLink></Typography>
         <Typography variant="body1">Track your mood to have a better day.</Typography>
       </Container>
     </Box>

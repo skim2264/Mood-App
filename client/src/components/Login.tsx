@@ -36,7 +36,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
   };
 
   return (
-    <Grid container component="main" sx={{ height: '100%' }}>
+    <Grid container component="main" sx={{ height: '80vh' }}>
       <CssBaseline />
       <Grid container item xs={false} sm={6} md={5} className='loginImage'>
         <Container
@@ -45,21 +45,29 @@ export default function Login({ onLoginSuccess }: LoginProps) {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+            mx: 2
           }}
         >
           <Grid item sx={{ mb: 3, fontSize: '35px', fontWeight: 'bold'}}>mood</Grid>
-          <Grid item><img src={loginImg} alt="Bed in the clouds" id="dreambedImg"/></Grid>
-          <Grid item sx={{ mt: 3, fontSize: '24px', fontWeight:'medium', textAlign:'center'}}>"Believe you can, and you're halfway there."</Grid>
-          <Grid item sx={{ fontSize: '24px', fontWeight:'medium', textAlign:'center'}}>-Theodore Roosevelt</Grid>
+          <Grid item><img src={loginImg} alt="Bed in the clouds" id="dreambedImg" className="circleImage"/></Grid>
+          <Grid item sx={{ mt: 3, fontSize: '20px', textAlign:'center'}}>"Believe you can, and you're halfway there."</Grid>
+          <Grid item sx={{ fontSize: '18px', textAlign:'center'}}>-Theodore Roosevelt</Grid>
         </Container>
       </Grid>
-      <Grid item xs={12} sm={6} md={7} component={Paper} elevation={6} square>
+
+      <Grid item xs={12} sm={6} md={7} component={Paper} elevation={6} square 
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignContent: 'center'
+        }}
+      >
         <Box
           sx={{
-            my: 8,
-            mx: 4,
+            mx: 8,
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'column'
           }}
         >
           <Typography component="h1" variant="h2" sx={{mb: 4}}>
@@ -69,7 +77,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
             sx={{ 
               mt: 1,
               display: 'flex',
-              flexDirection: 'column',
+              flexDirection: 'column'
           }}>
             <InputLabel htmlFor="username"><Typography variant='h3'>Username</Typography></InputLabel>
             <Controller 
@@ -92,7 +100,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                         borderRadius: "50px"
                       }
                     }}
-                    sx={{mb: 3}}
+                    sx={{mb: 4}}
                   />
                 )}
               />

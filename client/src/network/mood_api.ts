@@ -25,7 +25,7 @@ async function fetchData(input: RequestInfo, init?: RequestInit) {
 
 //Authentication functions
 export async function getLoggedInUser(): Promise<User> {
-  const response = await fetchData("http://localhost:5000/api/users", { method: "GET" });
+  const response = await fetchData("http://localhost:5000/api/users", { method: "GET", credentials: 'include' });
   return response.json();
 }
 
@@ -39,6 +39,7 @@ export interface SignUpCredentials {
 export async function signUp(credentials: SignUpCredentials): Promise<User> {
   const response = await fetchData("http://localhost:5000/api/users/signup", {
     method: "POST",
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json",
     },
@@ -55,6 +56,7 @@ export interface LoginCredentials {
 export async function login(credentials: LoginCredentials): Promise<User> {
   const response = await fetchData("http://localhost:5000/api/users/login", {
     method: "POST",
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json",
     },
@@ -104,8 +106,15 @@ export async function deleteUserMood(date:string): Promise<UserMood> {
   return response.json();
 }
 
-export async function getUserMood(date:string): Promise<UserMood> {
+//get user mood by day
+/* export async function getUserMoodByDate(date:Date) {
   const response = await fetchData(`http://localhost:5000/api/profile/${date}`, { method: "GET" });
+  return response;
+} */
+
+//get user mood by month
+export async function getUserMoodByMonth(date:Date): Promise<UserMood[]> {
+  const response = await fetchData(`http://localhost:5000/api/profile/${date}`, { method: "GET", credentials: 'include', });
   return response.json();
 }
 
@@ -118,5 +127,10 @@ export async function getRec(userMood: string): Promise<Advice | Song | Quote> {
 //Get list of all mood options - call this in home and remove the call there
 export async function getAllMoods(): Promise<Mood[]> {
   const response = await fetchData("http://localhost:5000/api/mood/", { method: "GET" });
+  return response.json();
+}
+
+export async function getUserMoodList() {
+  const response = await fetchData("http://localhost:500/api/users/moodList", { method: "GET", credentials: 'include'});
   return response.json();
 }
