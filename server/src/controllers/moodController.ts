@@ -27,7 +27,7 @@ export const getRec: RequestHandler = async(req, res, next) => {
   const randomInt = getRandomInt(3);
 
   //randomly pick from which list to get recommended list and pick randomly from list
-  if (randomInt == 0) {
+   if (randomInt == 0) {
     const adviceList = await AdviceModel.find({mood: req.params.mood}).exec();
     rec = adviceList[getRandomInt(adviceList.length)];
   } else if (randomInt == 1) {
@@ -36,7 +36,7 @@ export const getRec: RequestHandler = async(req, res, next) => {
   } else if (randomInt == 2) {
     const songList = await SongModel.find({mood: req.params.mood}).exec();
     rec = songList[getRandomInt(songList.length)];
-  }
+  } 
 
   try {
     res.status(200).json(rec);
@@ -73,7 +73,7 @@ export const addMood: RequestHandler<unknown, unknown, addTodayMood, unknown> = 
 
     //get user and add user_mood to moodslist
     const user = await UserModel.findById(authenticatedUserId).exec();
-    user?.moodsList.push(todayMood._id);
+    user?.moodsList.push(todayMood.day);
     await user?.save();
 
     res.status(201).json(todayMood);

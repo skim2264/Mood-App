@@ -1,5 +1,19 @@
 [
   {
+    "quote": "Life is either a daring adventure or nothing at all.",
+    "author": "Helen Keller",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "excited",
+    "rectype": "quote"
+  },
+  {
+    "quote": "The world is full of magic things, patiently waiting for our senses to grow sharper.",
+    "author": "W.B. Yeats",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "excited",
+    "rectype": "quote"
+  },
+  {
     "quote": "Happiness is not something you postpone for the future; it is something you design for the present.",
     "author": "Jim Rohn",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
@@ -14,87 +28,45 @@
     "rectype": "quote"
   },
   {
-    "quote": "Courage is not the absence of fear, but the triumph over it.",
-    "author": "Nelson Mandela",
+    "quote": "The more relaxed you can get, the better you'll do",
+    "author": "Isaac Mizrahi",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "courageous",
+    "mood": "relaxed",
     "rectype": "quote"
   },
   {
-    "quote": "Courage is resistance to fear, mastery of fear, not absence of fear.",
-    "author": "Mark Twain",
+    "quote": "Your mind will answer most questions if you learn to relax and wait for the answer",
+    "author": "William S. Burroughs",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "courageous",
+    "mood": "relaxed",
     "rectype": "quote"
   },
   {
-    "quote": "Being deeply loved by someone gives you strength while loving someone deeply gives you courage.",
-    "author": "Lao Tzu",
+    "quote": "In the midst of movement and chaos, keep stillness inside of you.",
+    "author": "Deepak Chopra",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "love",
+    "mood": "calm",
     "rectype": "quote"
   },
   {
-    "quote": "Love is not finding someone to live with, it's finding someone you can't live without.",
-    "author": "Rafael Ortiz",
+    "quote": "The calm mind is the ultimate weapon against challenges and adversities.",
+    "author": "Bryant McGill",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "love",
+    "mood": "calm",
     "rectype": "quote"
   },
   {
-    "quote": "Do not let the behavior of others destroy your inner peace.",
-    "author": "Dalai Lama",
+    "quote": "The world is full of magic things, patiently waiting for our senses to grow sharper.",
+    "author": "W.B. Yeats",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "annoyed",
+    "mood": "bored",
     "rectype": "quote"
   },
   {
-    "quote": "It's not what happens to you, but how you react to it that matters.",
-    "author": "Epictetus",
+    "quote": "The cure for boredom is curiosity. There is no cure for curiosity.",
+    "author": "Dorothy Parker",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "annoyed",
-    "rectype": "quote"
-  },
-  {
-    "quote": "Forgive yourself for not knowing what you didn't know before you learned it.",
-    "author": "Maya Angelou",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "guilty",
-    "rectype": "quote"
-  },
-  {
-    "quote": "Maybe there's more we all could have done, but we just have to let the guilt remind us to do better next time.",
-    "author": "Veronica Roth",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "guilty",
-    "rectype": "quote"
-  },
-  {
-    "quote": "Do not be embarrassed by your failures, learn from them and start again.",
-    "author": "Richard Branson",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "embarrassed",
-    "rectype": "quote"
-  },
-  {
-    "quote": "If you are never scared, embarrassed, or hurt, it means you never take chances.",
-    "author": "Julia Soul",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "embarrassed",
-    "rectype": "quote"
-  },
-  {
-    "quote": "The greatest healing therapy is friendship and love.",
-    "author": "Hubert H. Humphrey",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "sick",
-    "rectype": "quote"
-  },
-  {
-    "quote": "The greatest wealth is health.",
-    "author": "Virgil",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "sick",
+    "mood": "bored",
     "rectype": "quote"
   },
   {
@@ -112,31 +84,31 @@
     "rectype": "quote"
   },
   {
-    "quote": "When anger arises, think of the consequences.",
-    "author": "Confucius",
+    "quote": "Do not anticipate trouble or worry about what may never happen. Keep in the sunlight.",
+    "author": "Benjamin Franklin",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "angry",
+    "mood": "nervous",
     "rectype": "quote"
   },
   {
     "quote": "Anger is an acid that can do more harm to the vessel in which it is stored than to anything on which it is poured.",
     "author": "Mark Twain",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "angry",
+    "mood": "irritated",
     "rectype": "quote"
   },
   {
-    "quote": "The eternal quest of the human being is to shatter his loneliness.",
-    "author": "Norman Cousins",
+    "quote": "Do not let the behavior of others destroy your inner peace.",
+    "author": "Dalai Lama",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "lonely",
+    "mood": "irritated",
     "rectype": "quote"
   },
   {
-    "quote": "The greatest thing in the world is to know how to belong to oneself.",
-    "author": "Michel de Montaigne",
+    "quote": "It's not what happens to you, but how you react to it that matters.",
+    "author": "Epictetus",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "lonely",
+    "mood": "irritated",
     "rectype": "quote"
   }
 ]

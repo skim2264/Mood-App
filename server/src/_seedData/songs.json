@@ -1,5 +1,21 @@
 [
   {
+    "title": "Roar",
+    "artist": "Katy Perry",
+    "link": "https://www.youtube.com/watch?v=CevxZvSJLk8&ab_channel=KatyPerryVEVO",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "excited",
+    "rectype": "song"
+  },
+  {
+    "title": "Can't Stop The Feeling!",
+    "artist": "Justin Timberlake",
+    "link": "https://www.youtube.com/watch?v=ru0K8uYEZWw&ab_channel=justintimberlakeVEVO",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "excited",
+    "rectype": "song"
+  },
+  {
     "title": "The Lazy Song",
     "artist": "Bruno Mars",
     "link": "https://www.youtube.com/watch?v=d-diB65scQU&ab_channel=BobbyMcFerrinVEVO",
@@ -32,35 +48,11 @@
     "rectype": "song"
   },
   {
-    "title": "Roar",
-    "artist": "Katy Perry",
-    "link": "https://www.youtube.com/watch?v=CevxZvSJLk8&ab_channel=KatyPerryVEVO",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "courageous",
-    "rectype": "song"
-  },
-  {
-    "title": "Fight Song",
-    "artist": "Rachel Platten",
-    "link": "https://www.youtube.com/watch?v=xo1VInw-SKc&ab_channel=RachelPlattenVEVO",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "courageous",
-    "rectype": "song"
-  },
-  {
-    "title": "Eye of the tiger",
-    "artist": "Survivor",
-    "link": "https://www.youtube.com/watch?v=btPJPFnesV4&ab_channel=SurvivorVEVO",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "courageous",
-    "rectype": "song"
-  },
-  {
     "title": "Thinking Out Loud",
     "artist": "Ed Sheeran",
     "link": "https://www.youtube.com/watch?v=lp-EO5I60KA&ab_channel=EdSheeran",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "love",
+    "mood": "relaxed",
     "rectype": "song"
   },
   {
@@ -68,7 +60,23 @@
     "artist": "John Legend",
     "link": "https://www.youtube.com/watch?v=450p7goxZqg&ab_channel=johnlegendVEVO",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "love",
+    "mood": "relaxed",
+    "rectype": "song"
+  },
+  {
+    "title": "Lost in Japan",
+    "artist": "Shawn Mendes",
+    "link": "https://www.youtube.com/watch?v=SAWzXkV3hHo&ab_channel=ShawnMendesVEVO",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "calm",
+    "rectype": "song"
+  },
+  {
+    "title": "Ocean Eyes",
+    "artist": "Billie Eilish",
+    "link": "https://www.youtube.com/watch?v=viimfQi_pUw&ab_channel=BillieEilish",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "calm",
     "rectype": "song"
   },
   {
@@ -76,7 +84,7 @@
     "artist": "P!nk",
     "link": "https://www.youtube.com/watch?v=FJfFZqTlWrQ&ab_channel=PinkVEVO",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "annoyed",
+    "mood": "bored",
     "rectype": "song"
   },
   {
@@ -84,47 +92,7 @@
     "artist": "Ed Sheeran & Justin Bieber",
     "link": "https://www.youtube.com/watch?v=y83x7MgzWOA&ab_channel=EdSheeran",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "annoyed",
-    "rectype": "song"
-  },
-  {
-    "title": "Sorry",
-    "artist": "Justin Bieber",
-    "link": "https://www.youtube.com/watch?v=fRh_vgS2dFE&ab_channel=JustinBieberVEVO",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "guilty",
-    "rectype": "song"
-  },
-  {
-    "title": "Human",
-    "artist": "Christina Perri",
-    "link": "https://www.youtube.com/watch?v=r5yaoMjaAmE&ab_channel=ChristinaPerri",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "guilty",
-    "rectype": "song"
-  },
-  {
-    "title": "Shake it Off",
-    "artist": "Taylor Swift",
-    "link": "https://www.youtube.com/watch?v=nfWlot6h_JM&ab_channel=TaylorSwiftVEVO",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "embarrassed",
-    "rectype": "song"
-  },
-  {
-    "title": "Confident",
-    "artist": "Demi Lovato",
-    "link": "https://www.youtube.com/watch?v=cwLRQn61oUY&ab_channel=DemiLovatoVEVO",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "embarrassed",
-    "rectype": "song"
-  },
-  {
-    "title": "Comfortable",
-    "artist": "Lauv",
-    "link": "https://www.youtube.com/watch?v=ZRcEzDtNI6o&ab_channel=Lauv",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "sick",
+    "mood": "bored",
     "rectype": "song"
   },
   {
@@ -132,7 +100,7 @@
     "artist": "Birdy",
     "link": "https://www.youtube.com/watch?v=aNzCDt2eidg&ab_channel=Birdy",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "sick",
+    "mood": "sad",
     "rectype": "song"
   },
   {
@@ -158,27 +126,11 @@
     "rectype": "song"
   },
   {
-    "title": "In The End",
-    "artist": "Linkin Park",
-    "link": "https://www.youtube.com/watch?v=eVTXPUF4Oz4&ab_channel=LinkinPark",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "angry",
-    "rectype": "song"
-  },
-  {
-    "title": "abcefu",
-    "artist": "GAYLE",
-    "link": "https://www.youtube.com/watch?v=NaFd8ucHLuo&ab_channel=GAYLE",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "angry",
-    "rectype": "song"
-  },
-  {
     "title": "Lonely",
     "artist": "Justin Bieber & Benny Blanco",
     "link": "https://www.youtube.com/watch?v=xQOO2xGQ1Pc&ab_channel=JustinBieberVEVO",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "lonely",
+    "mood": "sad",
     "rectype": "song"
   },
   {
@@ -186,7 +138,39 @@
     "artist": "Coldplay",
     "link": "https://www.youtube.com/watch?v=k4V3Mo61fJM&ab_channel=Coldplay",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "lonely",
+    "mood": "sad",
+    "rectype": "song"
+  },
+  {
+    "title": "Shake it Off",
+    "artist": "Taylor Swift",
+    "link": "https://www.youtube.com/watch?v=nfWlot6h_JM&ab_channel=TaylorSwiftVEVO",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "nervous",
+    "rectype": "song"
+  },
+  {
+    "title": "Confident",
+    "artist": "Demi Lovato",
+    "link": "https://www.youtube.com/watch?v=cwLRQn61oUY&ab_channel=DemiLovatoVEVO",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "nervous",
+    "rectype": "song"
+  },
+  {
+    "title": "In The End",
+    "artist": "Linkin Park",
+    "link": "https://www.youtube.com/watch?v=eVTXPUF4Oz4&ab_channel=LinkinPark",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "irritated",
+    "rectype": "song"
+  },
+  {
+    "title": "abcedfu",
+    "artist": "GAYLE",
+    "link": "https://www.youtube.com/watch?v=NaFd8ucHLuo&ab_channel=GAYLE",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "irritated",
     "rectype": "song"
   }
 ]

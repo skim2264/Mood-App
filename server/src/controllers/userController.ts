@@ -2,9 +2,11 @@ import { RequestHandler } from "express";
 import createHttpError from "http-errors";
 import UserModel from "../models/user";
 import bcrypt from "bcrypt";
+import { assertIsDefined } from "../util/assertIsDefined";
 
 export const getAuthenticatedUser: RequestHandler = async (req, res, next) => {
   try {
+    console.log(req.session.userId)
     const user = await UserModel.findById(req.session.userId).exec();
     res.status(200).json(user);
   } catch (error) {
@@ -78,7 +80,6 @@ export const login: RequestHandler<unknown, unknown, LoginBody, unknown> = async
     if (!passwordMatch) {
       throw createHttpError(401, "Invalid credentials.");
     }
-
     req.session.userId = user._id;
 
     res.status(201).json(user);
@@ -96,3 +97,20 @@ export const logout: RequestHandler = async(req, res, next) => {
     }
   })
 };
+
+export const getUserMoodList: RequestHandler = async(req, res, next) => {
+  const authenticatedUserId = req.session.userId;
+
+  try {
+    assertIsDefined(authenticatedUserId);
+
+    const user = await UserModel.findById(authenticatedUserId).exec();
+
+    if (!user) {
+      throw createHttpError(401, "User not found");
+    }
+    res.status(200).json(user.moodsList);
+  } catch(error) {
+    next(error);
+  }
+}

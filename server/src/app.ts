@@ -12,20 +12,24 @@ import env from "./util/validateEnv";
 import MongoStore from "connect-mongo";
 import { requiresAuth } from "./middleware/auth";
 
+
 const app = express();
 
 app.use(morgan("dev"));
 
 app.use(express.json());
-
-app.use(cors());
+app.use(express.urlencoded({ extended: false }));
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true,
+}));
 
 app.use(session({
   secret: env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: {
-    maxAge: 120 * 60 * 1000,
+    maxAge: 60 * 60 * 1000,
   },
   rolling: true,
   store: MongoStore.create({

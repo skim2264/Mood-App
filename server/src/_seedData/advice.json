@@ -1,5 +1,12 @@
 [
   {
+    "title": "Watch a fun movie",
+    "description": "A comedic movie can keep up your already great mood!",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "excited",
+    "rectype": "advice"
+  },
+  {
     "title": "Share your joy",
     "description": "Happiness is contagious, so don't be afraid to share your positive emotions with others. Whether it's through a genuine smile, a kind word, or an act of kindness, spreading happiness can amplify your own feelings of joy.",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
@@ -14,94 +21,31 @@
     "rectype": "advice"
   },
   {
-    "title": "Watch a fun movie",
-    "description": "A comedic movie can keep up your already great mood!",
+    "title": "Appreciate the little things",
+    "description": "Take notice of the small details and moments that make your relationship special. It could be a shared laugh, a gentle touch, or a meaningful glance. Cultivating gratitude for these small gestures can amplify your feelings of love and bring more happiness into your relationship.",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "happy",
-    "rectype": "advice"
-  },
-  {
-    "title": "Face your fears",
-    "description": "Courage can be a powerful tool for overcoming fear. Identify the fears that have been holding you back and make a conscious effort to confront them. Start with small steps and gradually work your way up to more significant challenges.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "courageous",
-    "rectype": "advice"
-  },
-  {
-    "title": "Try new experiences",
-    "description": "Seek out new and exciting experiences that you've always wanted to try. Whether it's a new hobby, a different cuisine, or an adventure you've been longing for, your courage will help you embrace the unknown and fully immerse yourself in the experience.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "courageous",
+    "mood": "relaxed",
     "rectype": "advice"
   },
   {
     "title": "Enjoy the moment",
     "description": "Allow yourself to fully embrace and savor the feeling of being in love. Be present in the moment and cherish the emotions and sensations that come with it. Take the time to appreciate the joy and happiness it brings to your life.",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "love",
+    "mood": "calm",
     "rectype": "advice"
   },
   {
-    "title": "Appreciate the little things",
-    "description": "Take notice of the small details and moments that make your relationship special. It could be a shared laugh, a gentle touch, or a meaningful glance. Cultivating gratitude for these small gestures can amplify your feelings of love and bring more happiness into your relationship.",
+    "title": "Pursue a new hobby or learn something new",
+    "description": "Use your free time to explore a new hobby or learn a new skill. This could be anything from playing a musical instrument, painting, cooking, coding, writing, gardening, or even learning a new language. Engaging in activities that spark your curiosity and passion can be both fulfilling and enjoyable.",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "love",
+    "mood": "bored",
     "rectype": "advice"
   },
   {
-    "title": "Take a breath and pause",
-    "description": "When annoyance sets in, it's helpful to take a moment to pause and collect yourself. Take a few deep breaths to calm your mind and regain a sense of composure before reacting.",
+    "title": "Read a book or listen to an audiobook",
+    "description": "Dive into the world of literature and choose a book that interests you. Whether it's fiction, non-fiction, self-help, or a genre you've never explored before, reading can be a great way to relax, learn, and transport yourself to different worlds. Alternatively, you can listen to an audiobook and enjoy a story while doing other tasks.",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "annoyed",
-    "rectype": "advice"
-  },
-  {
-    "title": "Find a healthy outlet for your emotions",
-    "description": "Engage in activities that allow you to release and manage your emotions in a healthy way. It could be physical exercise, journaling, engaging in a creative pursuit, or practicing mindfulness or meditation. Finding an outlet can help you process your emotions and regain a sense of calm.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "annoyed",
-    "rectype": "advice"
-  },
-  {
-    "title": "Reflect on the situation",
-    "description": "Take some time to reflect on the reasons behind your guilt. What actions or decisions led to this feeling? Assess whether your guilt is justified and whether there are any lessons to be learned from the situation.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "guilty",
-    "rectype": "advice"
-  },
-  {
-    "title": "Focus on positive actions",
-    "description": "Shift your attention towards positive actions that align with your values. Engage in acts of kindness, generosity, or service to others. By channeling your energy into positive behaviors, you can create a sense of balance and contribute to your own and others' well-being.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "guilty",
-    "rectype": "advice"
-  },
-  {
-    "title": "Shift your focus",
-    "description": "Instead of dwelling on the embarrassment, redirect your attention to something positive or engaging. Engage in activities that distract you and help shift your focus away from the embarrassing moment.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "embarrassed",
-    "rectype": "advice"
-  },
-  {
-    "title": "Take a deep breath and stay calm",
-    "description": "When embarrassment hits, take a moment to breathe deeply and calm yourself. This will help you regain composure and approach the situation with a clearer mind.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "embarrassed",
-    "rectype": "advice"
-  },
-  {
-    "title": "Rest and take care of yourself",
-    "description": "Put on you comfiest PJs, plushy socks, and cuddle under a fuzzy blanket with a hot cup of herbal tea. Watch your favorite comfort movie and take the day off.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "sick",
-    "rectype": "advice"
-  },
-  {
-    "title": "Eat nourishing foods",
-    "description": "Opt for light, easy-to-digest meals that provide essential nutrients. Include foods rich in vitamins and minerals, such as fruits, vegetables, lean proteins, and whole grains. If you have a reduced appetite, try consuming small, frequent meals or snacks to keep your energy levels up.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "sick",
+    "mood": "bored",
     "rectype": "advice"
   },
   {
@@ -119,31 +63,44 @@
     "rectype": "advice"
   },
   {
-    "title": "Engage in creative outlets",
-    "description": "Channel your anger into creative activities that allow for self-expression and release. Write in a journal, paint, play music, or engage in any form of art that resonates with you. Creative outlets can help process and transform anger into something positive.",
+    "title": "Shift your focus",
+    "description": "Instead of dwelling on the problem, redirect your attention to something positive or engaging. Engage in activities that distract you and help shift your focus away from your nervousness.",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "angry",
+    "mood": "nervous",
+    "rectype": "advice"
+  },
+  {
+    "title": "Take a deep breath and stay calm",
+    "description": "When nervousness hits, take a moment to breathe deeply and calm yourself. This will help you regain composure and approach the situation with a clearer mind.",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "nervous",
+    "rectype": "advice"
+  },
+  {
+    "title": "Engage in creative outlets",
+    "description": "Channel your irritation into creative activities that allow for self-expression and release. Write in a journal, paint, play music, or engage in any form of art that resonates with you. Creative outlets can help process and transform anger into something positive.",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "irritated",
     "rectype": "advice"
   },
   {
     "title": "Engage in physical activity",
-    "description": "Physical activity can be a healthy outlet for anger. Engage in activities such as running, swimming, or hitting a punching bag. Exercise releases endorphins, which can help alleviate anger and promote a sense of well-being.",
+    "description": "Physical activity can be a healthy outlet for irritation. Engage in activities such as running, swimming, or hitting a punching bag. Exercise releases endorphins, which can help alleviate anger and promote a sense of well-being.",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "angry",
+    "mood": "irritated",
+    "rectype": "advice"
+  }, {
+    "title": "Take a breath and pause",
+    "description": "When annoyance sets in, it's helpful to take a moment to pause and collect yourself. Take a few deep breaths to calm your mind and regain a sense of composure before reacting.",
+    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
+    "mood": "irritated",
     "rectype": "advice"
   },
   {
-    "title": "Hang out with your friends",
-    "description": "Reach out to your closest friends or family and go out for your favorite foods or to go for a walk in the park. Remember you are not alone.",
+    "title": "Find a healthy outlet for your emotions",
+    "description": "Engage in activities that allow you to release and manage your emotions in a healthy way. It could be physical exercise, journaling, engaging in a creative pursuit, or practicing mindfulness or meditation. Finding an outlet can help you process your emotions and regain a sense of calm.",
     "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "lonely",
-    "rectype": "advice"
-  },
-  {
-    "title": "Volunteer or engage in community activities",
-    "description": "Get involved in volunteer work or community activities that align with your passions or interests. Contributing to a cause you care about not only gives you a sense of purpose but also exposes you to like-minded individuals who share your values. This can lead to meaningful connections and a sense of belonging.",
-    "image": "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    "mood": "lonely",
+    "mood": "irritated",
     "rectype": "advice"
   }
 ]

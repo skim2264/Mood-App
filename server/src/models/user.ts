@@ -5,7 +5,7 @@ const UserSchema = new Schema({
   lastname: {type: String},
   username: {type: String, required: true, unique: true},
   password: {type: String, required: true, select: false},
-  moodsList: [{type: Schema.Types.ObjectId, ref: 'UserMood'}]
+  moodsList: {type: Array}
 });
 
 type User = InferSchemaType<typeof UserSchema>;

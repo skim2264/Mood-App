@@ -10,6 +10,6 @@ router.delete("/:date", profileController.deleteMood);
 router.put("/:date", profileController.editMood);
 
 //Get Mood
-router.get("/:date", profileController.getMood);
+router.get("/:date", profileController.getMoodByMonth);
 
 export default router; 

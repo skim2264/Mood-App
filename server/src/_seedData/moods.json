@@ -1,52 +1,42 @@
 [
   {
-    "mood": "happy",
+    "mood": "excited",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/smiley-icon.svg",
-    "color": "green"
+    "color": "yellow"
   },
   {
-    "mood": "courageous",
-    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
-    "color": "green"
-  },
-  {
-    "mood": "love",
+    "mood": "happy",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
     "color": "green"
   },
   {
-    "mood": "annoyed",
+    "mood": "relaxed",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
-    "color": "yellow"
+    "color": "blue"
   },
   {
-    "mood": "guilty",
+    "mood": "calm",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
-    "color": "yellow"
+    "color": "blue"
   },
   {
-    "mood": "embarrassed",
+    "mood": "bored",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
-    "color": "yellow"
-  },
-  {
-    "mood": "sick",
-    "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
-    "color": "red"
+    "color": "purple"
   },
   {
     "mood": "sad",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
-    "color": "red"
+    "color": "purple"
   },
   {
-    "mood": "angry",
+    "mood": "nervous",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
     "color": "red"
   },
   {
-    "mood": "lonely",
+    "mood": "irritated",
     "image": "https://img.uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg",
-    "color": "red"
+    "color": "black"
   }
 ]
