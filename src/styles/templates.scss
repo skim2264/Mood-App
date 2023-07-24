@@ -1,0 +1,10 @@
+%PageDivTemplate {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+%PurpleGradient {
+  background-color: white;
+  background-image: linear-gradient(rgba(81, 66, 139, 1), rgba(81, 66, 139, .5));
+}

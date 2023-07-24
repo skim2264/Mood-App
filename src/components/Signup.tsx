@@ -49,8 +49,8 @@ export default function Signup({onSignupSuccess}: SignupProps) {
       >
         <Grid item sx={{ mb: 3, fontSize: '35px', fontWeight: 'bold'}}>mood</Grid>
         <Grid item><img src={loginImg} alt="Bed in the clouds" id="dreambedImg"/></Grid>
-        <Grid item sx={{ mt: 3, fontSize: '24px', fontWeight:'medium', textAlign:'center'}}>"Believe you can, and you're halfway there."</Grid>
-        <Grid item sx={{ fontSize: '24px', fontWeight:'medium', textAlign:'center'}}>-Theodore Roosevelt</Grid>
+        <Grid item sx={{ mt: 3, fontSize: '20px', textAlign:'center'}}>"Believe you can, and you're halfway there."</Grid>
+        <Grid item sx={{ fontSize: '18px', textAlign:'center'}}>-Theodore Roosevelt</Grid>
       </Container>
     </Grid>
     <Grid item xs={12} sm={6} md={7} component={Paper} elevation={6} square>

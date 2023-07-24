@@ -1,5 +1,5 @@
 import React from "react";
-import AdviceRec from "./QuoteRec";
+import AdviceRec from "./AdviceRec";
 import SongRec from "./SongRec";
 import QuoteRec from "./QuoteRec";
 import { Mood as MoodModel} from "../models/mood";

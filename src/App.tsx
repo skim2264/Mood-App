@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.scss';
+import 'react-calendar/dist/Calendar.css';
+import './styles/App.scss';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -23,7 +24,7 @@ const theme = createTheme({
     ].join(','),
     h1: {
       fontWeight: 700,
-      fontSize: '3rem',
+      fontSize: '2.5rem',
     },
     h2: {
       fontWeight: 700,
@@ -38,6 +39,9 @@ const theme = createTheme({
     }
   },
   palette: {
+    common: {
+      black: "rgba(67, 67, 67, 1)"
+    },
     secondary: {
       main: "rgb(255,255,255)"
     }
@@ -49,23 +53,6 @@ function App() {
   //maybe add a cute custom cursor
 
   const [loggedInUser, setLoggedInUser] = useState<User | null>(null);
-
-/*   const [moodList, setMoodList] = useState<Mood[]>([]);
-
-  //load the mood list from the API
-  useEffect(() => {
-    async function loadMoodList() {
-      try {
-        const moodList = await MoodAPI.getAllMoods();
-        setMoodList(moodList);
-      } catch (error) {
-        console.error(error);
-        alert(error);
-      }
-    }
-
-    loadMoodList();
-  }, []); */
 
   //get logged in user
   useEffect(() => {

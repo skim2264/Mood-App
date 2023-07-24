@@ -90,7 +90,7 @@ export default function Navbar({loggedInUser, onLogoutSuccess}: NavbarProps) {
               </IconButton>
 
               <Menu
-                sx={{ mt: '45px' }}
+                sx={{ mt: '45px'}}
                 id="menu-appbar"
                 anchorEl={anchorEl}
                 anchorOrigin={{
@@ -105,8 +105,8 @@ export default function Navbar({loggedInUser, onLogoutSuccess}: NavbarProps) {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
                 >
-                  <MenuItem onClick={handleClose}><NavLink to="/profile" className="nav-link">Profile</NavLink></MenuItem>
-                  <MenuItem onClick={logout}><NavLink to="/" className="nav-link">Logout</NavLink></MenuItem>
+                  <MenuItem onClick={handleClose}><NavLink to="/profile" className="menu-link">Profile</NavLink></MenuItem>
+                  <MenuItem onClick={logout}><NavLink to="/" className="menu-link">Logout</NavLink></MenuItem>
                 </Menu>
               </div>
             )}
