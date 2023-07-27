@@ -128,3 +128,10 @@ hr {
   height: 80vh;
   padding: 50px;
 }
+
+//Edit Modal
+.editmodal-div {
+  @extend %PageDivTemplate;
+  height: 80vh;
+  padding: 100px;
+}

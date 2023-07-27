@@ -1,10 +1,11 @@
 import React, { useState} from 'react';
-import { Box, Button, Grid, Popover, Typography } from "@mui/material";
+import { Box, Button, Grid, Modal, Popover, Typography } from "@mui/material";
 import { UserMood } from "../models/userMood";
 import * as MoodAPI from "../network/mood_api";
 import { moodList } from '../assets/moodList';
 import { Mood as MoodModel } from '../models/mood';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditModal from './EditModal';
 
 interface CalendarDaysProps {
   date: Date,
@@ -24,7 +25,18 @@ interface dayData {
   color: string
 }
 
+const style = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  transform: 'translate(0%, -50%)',
+  boxShadow: 24,
+};
+
 export default function CalendarDays({date , changeCurrentDay , monthMoods}: CalendarDaysProps) {
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpen = () => setOpenModal(true);
+  const handleModalClose = () => setOpenModal(false);
+
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const [clickedData, setClickedData] = useState<dayData | null>(null);
 
@@ -82,6 +94,17 @@ export default function CalendarDays({date , changeCurrentDay , monthMoods}: Cal
 
     currentDays.push(calendarDay);
   };
+  
+  
+  const deleteUserMood = async(date:string) => {
+    try {
+      const response = await MoodAPI.deleteUserMood(date);
+      if (response) {alert("mood deleted")};
+    } catch (error) {
+      console.error(error);
+      alert(error);
+    }
+  }; 
 
   return (
     <Grid container className="table-content">
@@ -89,7 +112,8 @@ export default function CalendarDays({date , changeCurrentDay , monthMoods}: Cal
           return (
             <Grid item xs={12/7} className={"calendar-day" + (day.currentMonth ? " current" : "") + (day.selected ? " selected" : "")}
                    onClick={(e) => openPopup(e, day)}
-                   sx={{display: 'flex'}}>
+                   sx={{display: 'flex'}}
+                   key={day.date.toString()}>
                {day.mood && (<div className="calendar-badge" style={{backgroundColor: day.color}}>  </div>)}
               <p>{day.number}</p>
             </Grid>
@@ -125,8 +149,8 @@ export default function CalendarDays({date , changeCurrentDay , monthMoods}: Cal
         />
           <div className="calendar-popup">
             <div className="popoverButtons">
-              <Button>Edit</Button>
-              <Button><DeleteForeverIcon sx={{padding:0, margin:0}}/></Button>
+              <Button onClick={handleOpen}>Edit</Button>
+              <Button onClick={(e) => deleteUserMood(clickedData.date)}><DeleteForeverIcon sx={{padding:0, margin:0}}/></Button>
             </div>
             <img src={clickedData.image} alt={clickedData.mood} className="moodIconSmall" ></img>
             <Typography sx={{mt: 1}} style={{color:`${clickedData.color}`}}>{clickedData.mood.toUpperCase()}</Typography> 
@@ -134,6 +158,16 @@ export default function CalendarDays({date , changeCurrentDay , monthMoods}: Cal
           </div>
           
       </Popover>}
+      <Modal
+        open={openModal}
+        onClose={handleModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      > 
+        <Box sx={style}>
+          {clickedData && <EditModal date={clickedData.date}/>}
+        </Box>
+      </Modal>
     </Grid>
   )
 };
