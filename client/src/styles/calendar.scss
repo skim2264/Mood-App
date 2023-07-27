@@ -109,3 +109,29 @@
    height: 1rem;
    border-radius: 50%;
 }
+
+.calendar-popup {
+  background-color: #E7E3ED;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin: 0px 20px;
+    padding: 0px 10px;
+  }
+}
+
+.popoverButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  button {
+    color: #868686;
+  }
+  :nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+

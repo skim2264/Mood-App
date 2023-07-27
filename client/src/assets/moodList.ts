@@ -9,43 +9,43 @@ import sad from "./sad.png";
 
 export const moodList = [
   {
-    mood: "Excited",
+    mood: "excited",
     image: excited,
     color: "#EACD4D"
   },
   {
-    mood: "Happy",
+    mood: "happy",
     image: happy,
-    color: "green"
+    color: "#7EBB7E"
   },
   {
-    mood: "Relaxed",
+    mood: "relaxed",
     image: relaxed,
-    color: "blue"
+    color: "#7094C3"
   },
   {
-    mood: "Calm",
+    mood: "calm",
     image: calm,
-    color: "blue"
+    color: "#5B82C3"
   },
   {
-    mood: "Bored",
+    mood: "bored",
     image: bored,
-    color: "purple"
+    color: "#7967B6"
   },
   {
-    mood: "Sad",
+    mood: "sad",
     image: sad,
-    color: "purple"
+    color: "#73548E"
   },
   {
-    mood: "Nervous",
+    mood: "nervous",
     image: nervous,
-    color: "red"
+    color: "#8D2727"
   },
   {
-    mood: "Irritated",
+    mood: "irritated",
     image: irritated,
-    color: "black"
+    color: "#8D2727"
   },
 ]
