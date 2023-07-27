@@ -14,7 +14,6 @@ import { NavLink } from "react-router-dom";
 const QuoteRec = ({rec, moodClicked}: MoodRecProps) => {
 
   return (
-    <Box className="moodrec-div">
       <Stack component="main" className="moodrec-div-main rec-padding" id="quoterec"
         sx={{
           display: 'flex',
@@ -42,11 +41,6 @@ const QuoteRec = ({rec, moodClicked}: MoodRecProps) => {
           <Typography variant="body2">-{rec.author}</Typography>
         </Stack>
       </Stack>
-      <Container sx={{textAlign: 'center', mt: 3}}>
-        <Typography variant="body1">Your mood has been recorded in your <NavLink to="/profile">profile.</NavLink></Typography>
-        <Typography variant="body1">Track your mood to have a better day.</Typography>
-      </Container>
-    </Box>
   )
 };
 

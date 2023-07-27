@@ -15,7 +15,6 @@ import { NavLink } from "react-router-dom";
 const AdviceRec = ({rec, moodClicked}: MoodRecProps) => {
 
   return (
-    <Box className="moodrec-div">
       <Grid container component="main" className="moodrec-div-main" id="advicerec">
         <CssBaseline/>
         <Grid item 
@@ -44,12 +43,6 @@ const AdviceRec = ({rec, moodClicked}: MoodRecProps) => {
           <Typography variant="body2" sx={{mt: 1}}>{rec.description}</Typography>
         </Grid>
       </Grid>
-
-      <Container sx={{textAlign: 'center', mt: 3}}>
-        <Typography variant="body1">Your mood has been recorded in your <NavLink to="/profile">profile.</NavLink></Typography>
-        <Typography variant="body1">Track your mood to have a better day.</Typography>
-      </Container>
-    </Box>
   )
 };
 
