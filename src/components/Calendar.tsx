@@ -34,7 +34,7 @@ const Calendar = () => {
   const toCurrentDate = () => {
     setCurrentDay(new Date());
   }
-
+  
   useEffect(() => {
     //get all user moods in month and add to calendar view
     const getUserMoodByMonth = async(date: Date) => {
@@ -50,6 +50,27 @@ const Calendar = () => {
     getUserMoodByMonth(currentDayRef.current);
     setTriggerFetch(false);
   },[triggerFetch]); 
+
+  
+  /* const editUserMood = async(date:string) => {
+    try {
+      const response = await MoodAPI.editUserMood(date);
+      
+    } catch (error) {
+      console.error(error);
+      alert(error);
+    }
+  };
+  
+  const deleteUserMood = async(date:string) => {
+    try {
+      const response = await MoodAPI.editUserMood(date);
+      
+    } catch (error) {
+      console.error(error);
+      alert(error);
+    }
+  }; */
 
 return (
       <div className="calendar">
