@@ -66,7 +66,7 @@ export async function login(credentials: LoginCredentials): Promise<User> {
 }
 
 export async function logout() {
-  await fetchData("http://localhost:5000/api/users/logout", { method: "POST"});
+  await fetchData("http://localhost:5000/api/users/logout", { method: "POST", credentials: 'include'});
 }
 
 //Methods to modify user mood - may modify input to put and delete routes
@@ -78,20 +78,23 @@ export async function logout() {
 export async function addUserMood(userMood: string): Promise<UserMood> {
   const response = await fetchData("http://localhost:5000/api/mood/", {
     method: "POST",
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(userMood),
+    body: JSON.stringify({"mood":userMood}),
   });
   return response.json();
 }
 
-export async function editUserMood(date:string): Promise<UserMood> {
+export async function editUserMood(date:string, userMood: string): Promise<UserMood> {
   const response = await fetchData(`http://localhost:5000/api/profile/${date}`, {
     method: "PUT",
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify({"mood": userMood})
   });
   return response.json();
 }
@@ -99,6 +102,7 @@ export async function editUserMood(date:string): Promise<UserMood> {
 export async function deleteUserMood(date:string): Promise<UserMood> {
   const response = await fetchData(`http://localhost:5000/api/profile/${date}`, {
     method: "DELETE",
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json",
     },
@@ -107,10 +111,10 @@ export async function deleteUserMood(date:string): Promise<UserMood> {
 }
 
 //get user mood by day
-/* export async function getUserMoodByDate(date:Date) {
-  const response = await fetchData(`http://localhost:5000/api/profile/${date}`, { method: "GET" });
+ export async function getUserMoodByDate(date:Date) {
+  const response = await fetchData(`http://localhost:5000/api/profile/${date}`, { method: "GET", credentials: 'include', });
   return response;
-} */
+} 
 
 //get user mood by month
 export async function getUserMoodByMonth(date:Date): Promise<UserMood[]> {
@@ -120,16 +124,10 @@ export async function getUserMoodByMonth(date:Date): Promise<UserMood[]> {
 
 //Get recommedation based on user mood
 export async function getRec(userMood: string): Promise<Advice | Song | Quote> {
-  const response = await fetchData(`http://localhost:5000/api/mood/${userMood}`, { method: "GET" });
+  const response = await fetchData(`http://localhost:5000/api/mood/${userMood}`, { method: "GET", credentials: 'include'});
   return response.json();
 }
  
-//Get list of all mood options - call this in home and remove the call there
-export async function getAllMoods(): Promise<Mood[]> {
-  const response = await fetchData("http://localhost:5000/api/mood/", { method: "GET" });
-  return response.json();
-}
-
 export async function getUserMoodList() {
   const response = await fetchData("http://localhost:500/api/users/moodList", { method: "GET", credentials: 'include'});
   return response.json();

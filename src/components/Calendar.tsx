@@ -51,27 +51,6 @@ const Calendar = () => {
     setTriggerFetch(false);
   },[triggerFetch]); 
 
-  
-  /* const editUserMood = async(date:string) => {
-    try {
-      const response = await MoodAPI.editUserMood(date);
-      
-    } catch (error) {
-      console.error(error);
-      alert(error);
-    }
-  };
-  
-  const deleteUserMood = async(date:string) => {
-    try {
-      const response = await MoodAPI.editUserMood(date);
-      
-    } catch (error) {
-      console.error(error);
-      alert(error);
-    }
-  }; */
-
 return (
       <div className="calendar">
         <div className="calendar-header">
@@ -92,7 +71,7 @@ return (
           <Grid container className="table-header" >
             {
               weekdays.map((weekday) => {
-                return <Grid item xs={12/7} className="weekday" sx={{textAlign: 'center'}}><p>{weekday}</p></Grid>
+                return <Grid item xs={12/7} className="weekday" sx={{textAlign: 'center'}} key={weekday}><p>{weekday}</p></Grid>
               })
             }
           </Grid>
