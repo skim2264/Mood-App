@@ -1,5 +1,4 @@
 import { RequestHandler } from "express";
-import MoodModel from "../models/mood";
 import UserMoodModel from "../models/user_mood";
 import AdviceModel from "../models/advice";
 import QuoteModel from "../models/quote";
@@ -8,16 +7,6 @@ import UserModel from "../models/user";
 import createHttpError from "http-errors";
 import { assertIsDefined } from "../util/assertIsDefined";
 import { getRandomInt } from "../util/randomNum";
-
-//get list of moods
-export const getAllMoods: RequestHandler = async(req, res, next) => {
-  try {
-    const moods = await MoodModel.find().exec();
-    res.status(200).json(moods);
-  } catch (error) {
-    next(error);
-  }
-};
 
 //get random recommendation based on chosen mood
 export const getRec: RequestHandler = async(req, res, next) => {

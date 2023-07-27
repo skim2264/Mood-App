@@ -14,6 +14,12 @@ export const deleteMood: RequestHandler = async(req, res, next) => {
     assertIsDefined(authenticatedUserId);
 
     const mood = await UserMoodModel.findOneAndDelete({userId: authenticatedUserId, day: {$gte: startOfDay(date), $lte: endOfDay(date)}}).exec();
+    const user = await UserModel.findById(authenticatedUserId).exec();
+    const index = user?.moodsList.indexOf(date);
+    if (index && (index > -1)) {
+      user?.moodsList.splice(index, 1);
+    }
+    await user?.save();
 
     if (!mood) {
       throw createHttpError(400, "No mood chosen for this date.");
@@ -54,7 +60,7 @@ export const editMood: RequestHandler<updateMoodParams, unknown, updateMoodBody,
   }
 };
 
-/* export const getMoodByDate: RequestHandler = async(req, res, next) => {
+ export const getMoodByDate: RequestHandler = async(req, res, next) => {
   const date = new Date(req.params.date);
 
   const authenticatedUserId = req.session.userId;
@@ -72,7 +78,7 @@ export const editMood: RequestHandler<updateMoodParams, unknown, updateMoodBody,
   } catch (error) {
     next(error);
   }
-}; */
+}; 
 
 export const getMoodByMonth: RequestHandler = async(req, res, next) => {
   const date = new Date(req.params.date);

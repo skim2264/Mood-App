@@ -11,5 +11,6 @@ router.put("/:date", profileController.editMood);
 
 //Get Mood
 router.get("/:date", profileController.getMoodByMonth);
+router.get("/:month", profileController.getMoodByMonth);
 
 export default router; 

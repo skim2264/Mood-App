@@ -4,9 +4,6 @@ import { requiresAuth } from "../middleware/auth";
 
 const router = express.Router();
 
-//Get all moods and their images
-router.get("/", moodController.getAllMoods);
-
 //Get Recommendation based on mood
 router.get("/:mood", moodController.getRec);
 
