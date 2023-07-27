@@ -40,13 +40,21 @@ const Home = ({loggedInUser}: HomeProps) => {
     setMoodClicked(moodObj);
     const mood = moodObj.mood.toLowerCase();
     try {
-      const response = await MoodAPI.getRec(mood);
-      setRec(response);
-      console.log(response);
-      //only add to user mood to profile if logged in
-      if (loggedInUser) {
-        await MoodAPI.addUserMood(mood);
+      //alert user if they already logged their mood for the day
+      const alreadyLogged = await MoodAPI.getUserMoodByDate(new Date());
+      if (alreadyLogged) {
+        alert("You have already logged your mood today, go to your profile if you want to edit or delete your logged moods!");
+
+      } else {
+        const response = await MoodAPI.getRec(mood);
+        setRec(response);
+        console.log(response);
+        //only add to user mood to profile if logged in
+        if (loggedInUser) {
+          await MoodAPI.addUserMood(mood);
+        }
       }
+      
     } catch (error) {
       console.error(error);
       alert(error);
@@ -71,12 +79,9 @@ const Home = ({loggedInUser}: HomeProps) => {
         </Box>
       </div>
 
-      {moodClicked && <MoodRec rec={rec} moodClicked={moodClicked}></MoodRec>}
+      {moodClicked && <MoodRec rec={rec} moodClicked={moodClicked} loggedInUser={loggedInUser}></MoodRec>}
     </>
   )
 };
 
 export default Home;
-
-//add alert if they already added a mood for the day - only 1 mood per day 
-//in demo mood add a - login in or signup to add ur mood now, and add to database if they login or sign up
