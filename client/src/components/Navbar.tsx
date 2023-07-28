@@ -105,8 +105,16 @@ export default function Navbar({loggedInUser, onLogoutSuccess}: NavbarProps) {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
                 >
-                  <MenuItem onClick={handleClose}><NavLink to="/profile" className="menu-link">Profile</NavLink></MenuItem>
-                  <MenuItem onClick={logout}><NavLink to="/" className="menu-link">Logout</NavLink></MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <NavLink to="/profile" className="menu-link">
+                      <Typography variant="body1" sx={{fontSize:"1.4rem"}}>Profile</Typography>
+                    </NavLink>
+                  </MenuItem>
+                  <MenuItem onClick={logout}>
+                    <NavLink to="/" className="menu-link">
+                      <Typography variant="body1" sx={{fontSize:"1.4rem"}}>Logout</Typography>
+                    </NavLink>
+                  </MenuItem>
                 </Menu>
               </div>
             )}

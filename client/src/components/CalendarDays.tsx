@@ -99,7 +99,10 @@ export default function CalendarDays({date , changeCurrentDay , monthMoods}: Cal
   const deleteUserMood = async(date:string) => {
     try {
       const response = await MoodAPI.deleteUserMood(date);
-      if (response) {alert("mood deleted")};
+      if (response) {
+        alert("mood deleted");
+        window.location.reload();
+      };
     } catch (error) {
       console.error(error);
       alert(error);
@@ -154,7 +157,7 @@ export default function CalendarDays({date , changeCurrentDay , monthMoods}: Cal
             </div>
             <img src={clickedData.image} alt={clickedData.mood} className="moodIconSmall" ></img>
             <Typography sx={{mt: 1}} style={{color:`${clickedData.color}`}}>{clickedData.mood.toUpperCase()}</Typography> 
-            <Typography sx={{mb: 2}}> was Recorded</Typography> 
+            <Typography variant="body1" sx={{mb: 2, fontSize: '1.3rem'}}> was Recorded</Typography> 
           </div>
           
       </Popover>}

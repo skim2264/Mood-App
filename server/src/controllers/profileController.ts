@@ -68,10 +68,9 @@ export const editMood: RequestHandler<updateMoodParams, unknown, updateMoodBody,
     assertIsDefined(authenticatedUserId);
 
     //get mood from specific date for user
-    const mood = await UserMoodModel.find({userId: authenticatedUserId, day: {$gte: startOfDay(date), $lte: endOfDay(date)}}).exec();
-  
+    const mood = await UserMoodModel.findOne({userId: authenticatedUserId, day: {$gte: startOfDay(date), $lte: endOfDay(date)}}).exec();
     if (!mood) {
-      throw createHttpError(400, "No mood chosen for this date.");
+      res.status(204);
     }
     //const moodsList;
     res.status(200).json(mood);
@@ -81,7 +80,7 @@ export const editMood: RequestHandler<updateMoodParams, unknown, updateMoodBody,
 }; 
 
 export const getMoodByMonth: RequestHandler = async(req, res, next) => {
-  const date = new Date(req.params.date);
+  const date = new Date(req.params.month);
   const authenticatedUserId = req.session.userId;
 
   try {

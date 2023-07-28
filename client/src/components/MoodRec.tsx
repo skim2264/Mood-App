@@ -27,7 +27,7 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
           }
           {!loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to track your mood for a better day!</Typography>
+              <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to start tracking your mood for a better day!</Typography>
             </Container>
           }
         </Box>
@@ -46,7 +46,7 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
           }
           {!loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to track your mood for a better day!</Typography>
+              <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to start tracking your mood for a better day!</Typography>
             </Container>
           }
         </Box>
@@ -65,7 +65,7 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
           }
           {!loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to track your mood for a better day!</Typography>
+              <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to start tracking your mood for a better day!</Typography>
             </Container>
           }
         </Box>

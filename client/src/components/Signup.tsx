@@ -24,10 +24,9 @@ export default function Signup({onSignupSuccess}: SignupProps) {
   const signUpSubmit = async (input: MoodAPI.SignUpCredentials) => {
     try {
       const newUser = await MoodAPI.signUp(input);
-      console.log(newUser);
       onSignupSuccess(newUser);
       navigate("/home");
-      alert("sign up success");
+      alert("You are signed up!");
     } catch (error) {
       console.error(error);
       alert(error);
