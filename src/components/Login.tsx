@@ -26,7 +26,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
     try {
       const user = await MoodAPI.login(input);
       onLoginSuccess(user);
-      alert("login success");
+      alert("You are logged in!");
       navigate('/home');
     } catch (error) {
       console.error(error);

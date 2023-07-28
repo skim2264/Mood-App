@@ -31,7 +31,6 @@ const Home = ({loggedInUser}: HomeProps) => {
 
   useEffect(() => {
     if (rec) {
-      console.log("Scrolling to MoodRec component");
       const element = document.getElementById("moodrec");
       element?.scrollIntoView({behavior:"smooth", block:"start"});
     };
@@ -46,12 +45,11 @@ const Home = ({loggedInUser}: HomeProps) => {
         const alreadyLogged = await MoodAPI.getUserMoodByDate(new Date());
         if (alreadyLogged) {
           alert("You have already logged your mood today, go to your profile if you want to edit or delete your logged moods!");
-  
+          return;
         }
       };
       const response = await MoodAPI.getRec(mood);
       setRec(response);
-      console.log(response);
       //only add to user mood to profile if logged in
       if (loggedInUser) {
         await MoodAPI.addUserMood(mood);

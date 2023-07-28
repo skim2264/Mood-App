@@ -112,13 +112,13 @@ export async function deleteUserMood(date:string): Promise<UserMood> {
 
 //get user mood by day
  export async function getUserMoodByDate(date:Date) {
-  const response = await fetchData(`http://localhost:5000/api/profile/${date}`, { method: "GET", credentials: 'include', });
-  return response;
+  const response = await fetchData(`http://localhost:5000/api/profile/date/${date}`, { method: "GET", credentials: 'include', });
+  return response.json();
 } 
 
 //get user mood by month
 export async function getUserMoodByMonth(date:Date): Promise<UserMood[]> {
-  const response = await fetchData(`http://localhost:5000/api/profile/${date}`, { method: "GET", credentials: 'include', });
+  const response = await fetchData(`http://localhost:5000/api/profile/month/${date}`, { method: "GET", credentials: 'include', });
   return response.json();
 }
 

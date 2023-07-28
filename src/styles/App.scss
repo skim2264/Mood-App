@@ -44,8 +44,14 @@ span {
 }
 
 .welcome-link {
-  color: white;
   text-decoration: none;
+  background: #FFFFFF;
+  background: linear-gradient(to bottom, #FFFFFF 0%, #BDBDBD 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 1.75rem;
 }
 
 .welcome-image {

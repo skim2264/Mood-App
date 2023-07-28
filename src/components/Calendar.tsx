@@ -3,7 +3,7 @@ import CalendarDays from './CalendarDays';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import '../styles/calendar.scss';
-import { Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import * as MoodAPI from "../network/mood_api";
 import { UserMood } from "../models/userMood";
 
@@ -67,8 +67,8 @@ return (
             </button>
           </div>
         </div>
-        <div className="calendar-body">
-          <Grid container className="table-header" >
+        <Box className="calendar-body" sx={{mb: 3}}>
+          <Grid container className="table-header" sx={{mb: 2}}>
             {
               weekdays.map((weekday) => {
                 return <Grid item xs={12/7} className="weekday" sx={{textAlign: 'center'}} key={weekday}><p>{weekday}</p></Grid>
@@ -76,39 +76,39 @@ return (
             }
           </Grid>
           <CalendarDays date={currentDay}  changeCurrentDay={changeCurrentDay}  monthMoods={monthMoods}/>
-        </div>
-        <Grid container spacing={2} sx={{display: 'flex', justifyContent: 'center'}}>
+        </Box>
+        <Grid container spacing={3} sx={{display: 'flex', justifyContent: 'center'}}>
           <Grid item sx={{display: 'flex', alignItems: 'center', gap: "10px"}}>
             <div className="legend-badge" style={{backgroundColor: '#EACD4D'}}></div>
-            <p>Excited</p>
+            <p className="legend-plabel">Excited</p>
           </Grid>
           <Grid item sx={{display: 'flex', alignItems: 'center', gap: "10px"}}>
             <div className="legend-badge" style={{backgroundColor: '#7EBB7E'}}></div>
-            <p>Happy</p>
+            <p className="legend-plabel">Happy</p>
           </Grid>
           <Grid item sx={{display: 'flex', alignItems: 'center', gap: "10px"}}>
             <div className="legend-badge" style={{backgroundColor: '#7094C3'}}></div>
-            <p>Relaxed</p>
+            <p className="legend-plabel">Relaxed</p>
           </Grid>
           <Grid item sx={{display: 'flex', alignItems: 'center', gap: "10px"}}>
             <div className="legend-badge" style={{backgroundColor: '#5B82C3'}}></div>
-            <p>Calm</p>
+            <p className="legend-plabel">Calm</p>
           </Grid>
           <Grid item sx={{display: 'flex', alignItems: 'center', gap: "10px"}}>
             <div className="legend-badge" style={{backgroundColor: '#7967B6'}}></div>
-            <p>Bored</p>
+            <p className="legend-plabel">Bored</p>
           </Grid>
           <Grid item sx={{display: 'flex', alignItems: 'center', gap: "10px"}}>
             <div className="legend-badge" style={{backgroundColor: '#73548E'}}></div>
-            <p>Sad</p>
+            <p className="legend-plabel">Sad</p>
           </Grid>
           <Grid item sx={{display: 'flex', alignItems: 'center', gap: "10px"}}>
             <div className="legend-badge" style={{backgroundColor: '#8D2727'}}></div>
-            <p>Nervous</p>
+            <p className="legend-plabel">Nervous</p>
           </Grid>
           <Grid item sx={{display: 'flex', alignItems: 'center', gap: "10px"}}>
             <div className="legend-badge" style={{backgroundColor: '#8D2727'}}></div>
-            <p>Irritated</p>
+            <p className="legend-plabel">Irritated</p>
           </Grid>
         </Grid>
       </div>
