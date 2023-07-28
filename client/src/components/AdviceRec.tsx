@@ -2,7 +2,7 @@ import { Advice as AdviceModel} from "../models/advice";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Mood as MoodModel} from "../models/mood";
-import { CssBaseline } from "@mui/material";
+import { Box, CssBaseline, Icon } from "@mui/material";
 
  interface MoodRecProps {
   rec: AdviceModel,
@@ -28,15 +28,37 @@ const AdviceRec = ({rec, moodClicked}: MoodRecProps) => {
         </Grid>
 
         <Grid item 
-          className="advice-div-right rec-padding"
+          className="advice-div-right"
           sm={6} 
           sx={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+            padding: "0px 50px"
         }}>
-          <Typography variant="h3" sx={{mb: 4}}>{rec.title}</Typography>
+          <Box 
+            sx={{
+              border:"2px solid #7094C3", 
+              borderRadius: "50%",  
+              width: "80px", 
+              height: "80px", 
+              color: "#7094C3",
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+            }}>
+            <Icon
+              sx={{
+                color: "#7094C3",
+                margin: "auto",
+                fontSize: "2.8rem"
+              }}>
+              {rec.image}
+          </Icon>
+          </Box>
+          
+          <Typography variant="h3" sx={{mb: 4, mt: 2}}>{rec.title}</Typography>
           <Typography variant="body1" sx={{mt: 1}}>{rec.description}</Typography>
         </Grid>
       </Grid>

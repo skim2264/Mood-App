@@ -1,10 +1,7 @@
-import React from "react";
 import { Quote as QuoteModel} from "../models/quote";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
 import { Mood as MoodModel} from "../models/mood";
-import { Box, Container, Stack } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { Stack } from "@mui/material";
 
  interface MoodRecProps {
   rec: QuoteModel,
