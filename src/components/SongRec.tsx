@@ -1,10 +1,13 @@
 import { Song as SongModel} from "../models/song";
-import { Box, CssBaseline, Grid, Typography } from "@mui/material";
+import { Box, CssBaseline, Grid, Icon, SvgIcon, Typography } from "@mui/material";
 import { Mood as MoodModel} from "../models/mood";
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FastRewindIcon from '@mui/icons-material/FastRewind';
 import FastForwardIcon from '@mui/icons-material/FastForward';
 import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
+import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import record from "../assets/record.jpg";
 
  interface MoodRecProps {
   rec: SongModel,
@@ -64,7 +67,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                 justifyContent: 'center', 
                 alignContent: 'center',
                 flexWrap:'wrap', 
-                backgroundImage: `url(${rec.image})`, 
+                backgroundImage: `url(${record})`, 
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center center',
                 width: '300px',
@@ -73,11 +76,11 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                 mb: 3,
                 mt: 3,
                 boxShadow: "3px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-                filter: "opacity(70%)"
+                filter: "opacity(80%)"
               }}>
               <Box sx={{position: 'absolute', top: '50%', transform: 'translateY(-50%)'}}>
-                <FastRewindIcon sx={{fontSize: '60px'}} color="secondary"/>
-                <PlayCircleOutlinedIcon sx={{fontSize: '60px', mx: 4}} color="secondary"/>
+                <FastRewindIcon sx={{fontSize: '60px'}} color="secondary"/> 
+                <PlayArrowIcon sx={{fontSize: '60px', fontWeight: 100, border:"3px solid white", borderRadius: "50%", mx: 4}} color="secondary"/>
                 <FastForwardIcon sx={{fontSize: '60px'}} color="secondary"/> 
               </Box>
             </Box>
