@@ -28,7 +28,7 @@ const QuoteRec = ({rec, moodClicked}: MoodRecProps) => {
             mb: 2
         }}>
           <img src={moodClicked.image} alt={moodClicked.mood} className="moodIconSmall" ></img>
-          <Typography variant="h3" sx={{mt: 2}}>YOUR MOOD IS <span style={{color:`${moodClicked.color}`}}>{moodClicked.mood.toLowerCase()}</span></Typography>
+          <Typography variant="h1" sx={{mt: 2, textAlign: 'center'}}>YOUR MOOD IS <span style={{color:`${moodClicked.color}`}}>{moodClicked.mood.toLowerCase()}</span></Typography>
         </Stack>
         <hr></hr>
         <Stack 
@@ -37,8 +37,8 @@ const QuoteRec = ({rec, moodClicked}: MoodRecProps) => {
             mx: 4,
             textAlign: 'center'
         }}>
-          <Typography variant="body1">{rec.quote}</Typography>
-          <Typography variant="body2">-{rec.author}</Typography>
+          <Typography variant="h3" sx={{fontStyle: 'italic', mb: 1}}>"{rec.quote}"</Typography>
+          <Typography variant="h3">-{rec.author}</Typography>
         </Stack>
       </Stack>
   )

@@ -76,7 +76,7 @@ export default function Navbar({loggedInUser, onLogoutSuccess}: NavbarProps) {
     <Box sx={{ flexGrow: 1}}>
       <AppBar position="fixed" color="transparent" elevation={0} sx={{ pl: 2, pt: 2, pr: 2}}>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'left' }}>
             {loggedInUser 
               ? <NavLink to="/home" className="nav-link">mood</NavLink> 
               : <NavLink to="/" className="nav-link">mood</NavLink> 

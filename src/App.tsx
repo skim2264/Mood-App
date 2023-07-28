@@ -24,18 +24,48 @@ const theme = createTheme({
     ].join(','),
     h1: {
       fontWeight: 700,
+      color: '#575757',
       fontSize: '2.5rem',
     },
     h2: {
-      fontWeight: 700,
-      fontSize: '2rem',
+      fontWeight: 500,
+      color: '#FFF',
+      fontSize: '2.5rem',
     },
     h3: {
       fontWeight: 500,
+      color: '#575757',
+      fontSize: '2rem',
+    },
+    h4: {
+      color: '#434343',
       fontSize: '1.5rem',
+      fontWeight: 500,
+      textAlign: 'left'
+    },
+    body1: {
+      color: '#575757',
+      fontSize: '1.6rem',
+      fontWeight: 500,
+      lineHeight: 'normal',
+      textAlign: 'center'
     },
     body2: {
-      fontStyle: 'oblique'
+      color: '#434343',
+      fontSize: '1.4rem',
+      fontWeight: 600
+    },
+    subtitle1: {
+      color: '#434343',
+      fontSize: '1.5rem',
+      fontWeight: 500,
+      fontStyle: 'italic',
+      lineHeight: 'normal'
+    },
+    subtitle2: {
+      color: '#FFF',
+      fontSize: '1.25rem',
+      fontWeight: 400,
     }
   },
   palette: {

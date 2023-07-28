@@ -21,13 +21,13 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
           <AdviceRec rec={rec} moodClicked={moodClicked}></AdviceRec>
           {loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body1">Your mood has been recorded in your <NavLink to="/profile">profile.</NavLink></Typography>
-              <Typography variant="body1">Track your mood to have a better day.</Typography>
+              <Typography variant="body2">Your mood has been recorded in your <NavLink to="/profile" className="rec-profile-link">profile</NavLink>.</Typography>
+              <Typography variant="body2">Track your mood to have a better day.</Typography>
             </Container>
           }
           {!loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body1"><NavLink to="/login">Login</NavLink> to track your mood for a better day!</Typography>
+              <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to track your mood for a better day!</Typography>
             </Container>
           }
         </Box>
@@ -40,13 +40,13 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
           <SongRec rec={rec} moodClicked={moodClicked}></SongRec>
           {loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body1">Your mood has been recorded in your <NavLink to="/profile">profile.</NavLink></Typography>
-              <Typography variant="body1">Track your mood to have a better day.</Typography>
+              <Typography variant="body2">Your mood has been recorded in your <NavLink to="/profile" className="rec-profile-link">profile.</NavLink></Typography>
+              <Typography variant="body2">Track your mood to have a better day.</Typography>
             </Container>
           }
           {!loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body1"><NavLink to="/login">Login</NavLink> to track your mood for a better day!</Typography>
+              <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to track your mood for a better day!</Typography>
             </Container>
           }
         </Box>
@@ -59,13 +59,13 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
         <QuoteRec rec={rec} moodClicked={moodClicked}></QuoteRec>
         {loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body1">Your mood has been recorded in your <NavLink to="/profile">profile.</NavLink></Typography>
-              <Typography variant="body1">Track your mood to have a better day.</Typography>
+              <Typography variant="body2">Your mood has been recorded in your <NavLink to="/profile" className="rec-profile-link">profile.</NavLink></Typography>
+              <Typography variant="body2">Track your mood to have a better day.</Typography>
             </Container>
           }
           {!loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body1"><NavLink to="/login">Login</NavLink> to track your mood for a better day!</Typography>
+              <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to track your mood for a better day!</Typography>
             </Container>
           }
         </Box>

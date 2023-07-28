@@ -1,10 +1,10 @@
 @use "templates";
+@use "variables";
 
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-family: inter;
 }
 
 html, body, #root {
@@ -12,13 +12,23 @@ html, body, #root {
 }
 
 .app-div {
-  background: url("../assets/main-background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  position: relative;
   padding: 100px;
   box-sizing: border-box;
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
+  min-height: 100vh;
+}
+
+.app-div::before {
+  content: "";
+  background: url("../assets/main-background.jpg") no-repeat fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6; 
+  z-index: -1; 
 }
 
 span {
@@ -55,6 +65,10 @@ span {
   box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.signup-link {
+  color: variables.$link-color;
+}
+
 //Buttons
 .gradient-button {
   @extend %PurpleGradient;
@@ -86,6 +100,7 @@ span {
 //Rec Pages
 .moodrec-div {
   height: 80vh;
+  font: variables.$font-color-main;
 }
 
 .moodrec-div-main {
@@ -95,6 +110,12 @@ span {
 
 .rec-padding {
   padding: 100px 50px;
+}
+
+.rec-profile-link, .rec-login-link {
+  color: variables.$link-color;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
 //Song Rec Page
@@ -108,11 +129,15 @@ span {
   width: 128px;
 }
 
+.youtube-link {
+  color: variables.$link-color;
+}
+
 //Advice Rec Page
 .advice-div-right {
   border-radius: 0px 20px 20px 0px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background-color: white;
+  background: rgba(255, 255, 255, 0.80);
 }
 
 //Quote Rec Page
