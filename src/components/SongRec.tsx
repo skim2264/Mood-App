@@ -71,11 +71,13 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                 height: '300px', 
                 borderRadius: '50%',
                 mb: 3,
-                mt: 3
+                mt: 3,
+                boxShadow: "3px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+                filter: "opacity(70%)"
               }}>
               <Box sx={{position: 'absolute', top: '50%', transform: 'translateY(-50%)'}}>
                 <FastRewindIcon sx={{fontSize: '60px'}} color="secondary"/>
-                <PlayCircleOutlinedIcon sx={{fontSize: '60px'}} color="secondary"/>
+                <PlayCircleOutlinedIcon sx={{fontSize: '60px', mx: 4}} color="secondary"/>
                 <FastForwardIcon sx={{fontSize: '60px'}} color="secondary"/> 
               </Box>
             </Box>
