@@ -31,8 +31,9 @@ const Home = ({loggedInUser}: HomeProps) => {
 
   useEffect(() => {
     if (rec) {
+      console.log("Scrolling to MoodRec component");
       const element = document.getElementById("moodrec");
-      element?.scrollIntoView({behavior:"smooth", block:"nearest"});
+      element?.scrollIntoView({behavior:"smooth", block:"start"});
     };
   },[rec])
 
@@ -41,19 +42,20 @@ const Home = ({loggedInUser}: HomeProps) => {
     const mood = moodObj.mood.toLowerCase();
     try {
       //alert user if they already logged their mood for the day
-      const alreadyLogged = await MoodAPI.getUserMoodByDate(new Date());
-      if (alreadyLogged) {
-        alert("You have already logged your mood today, go to your profile if you want to edit or delete your logged moods!");
-
-      } else {
-        const response = await MoodAPI.getRec(mood);
-        setRec(response);
-        console.log(response);
-        //only add to user mood to profile if logged in
-        if (loggedInUser) {
-          await MoodAPI.addUserMood(mood);
+      if (loggedInUser) {
+        const alreadyLogged = await MoodAPI.getUserMoodByDate(new Date());
+        if (alreadyLogged) {
+          alert("You have already logged your mood today, go to your profile if you want to edit or delete your logged moods!");
+  
         }
-      }
+      };
+      const response = await MoodAPI.getRec(mood);
+      setRec(response);
+      console.log(response);
+      //only add to user mood to profile if logged in
+      if (loggedInUser) {
+        await MoodAPI.addUserMood(mood);
+      };
       
     } catch (error) {
       console.error(error);
@@ -61,17 +63,21 @@ const Home = ({loggedInUser}: HomeProps) => {
     }
   }
 
+  const capitalizeFirst = (str: string) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
   return (
     <>
       <div className="home-div">
-        <Typography variant="h2" sx={{textAlign: 'center', mb: 3}}>What's your mood today?</Typography>
+        <Typography variant="h1" sx={{textAlign: 'center', mb: 3}}>What's your mood today?</Typography>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 3, sm: 9, md: 12 }}> 
             {moodList.map((mood) => (
               <Grid item xs={3} key={mood.mood}>
                 <Item elevation={0} sx={{backgroundColor:"transparent"}}>
                   <img src={mood.image} alt={mood.mood} className="moodIcon" onClick={(e) => onMoodClicked(mood)}/>
-                  <Typography variant="body1">{mood.mood}</Typography>
+                  <Typography variant="body2" sx={{fontWeight: 700}}>{capitalizeFirst(mood.mood)}</Typography>
                 </Item>
               </Grid>
             ))}

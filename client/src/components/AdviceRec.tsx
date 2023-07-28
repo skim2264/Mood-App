@@ -1,11 +1,8 @@
-import React from "react";
 import { Advice as AdviceModel} from "../models/advice";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Mood as MoodModel} from "../models/mood";
-import Box from "@mui/material/Box";
-import { Container, CssBaseline } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { CssBaseline } from "@mui/material";
 
  interface MoodRecProps {
   rec: AdviceModel,
@@ -27,7 +24,7 @@ const AdviceRec = ({rec, moodClicked}: MoodRecProps) => {
             justifyContent: 'center',
           }}>
             <img src={moodClicked.image} alt={moodClicked.mood} className="moodIconSmall" ></img>
-            <Typography variant="h3" sx={{mt: 2}}>YOUR MOOD IS <span style={{color:`${moodClicked.color}`}}>{moodClicked.mood.toLowerCase()}</span></Typography>
+            <Typography variant="h1" sx={{mt: 2, textAlign: 'center'}}>YOUR MOOD IS <span style={{color:`${moodClicked.color}`}}>{moodClicked.mood}</span></Typography>
         </Grid>
 
         <Grid item 
@@ -39,11 +36,13 @@ const AdviceRec = ({rec, moodClicked}: MoodRecProps) => {
             alignItems: 'center',
             justifyContent: 'center',
         }}>
-          <Typography variant="h2">{rec.title}</Typography>
-          <Typography variant="body2" sx={{mt: 1}}>{rec.description}</Typography>
+          <Typography variant="h3" sx={{mb: 4}}>{rec.title}</Typography>
+          <Typography variant="body1" sx={{mt: 1}}>{rec.description}</Typography>
         </Grid>
       </Grid>
   )
 };
 
 export default AdviceRec;
+
+//add image or icon 

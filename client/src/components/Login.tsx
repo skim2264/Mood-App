@@ -70,7 +70,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
             flexDirection: 'column'
           }}
         >
-          <Typography component="h1" variant="h2" sx={{mb: 4}}>
+          <Typography component="h1" variant="h1" sx={{mb: 4, textAlign: 'left', color: '#000'}}>
             SIGN IN
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit(loginSubmit)} 
@@ -79,7 +79,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
               display: 'flex',
               flexDirection: 'column'
           }}>
-            <InputLabel htmlFor="username"><Typography variant='h3'>Username</Typography></InputLabel>
+            <InputLabel htmlFor="username"><Typography variant='h4'>Username</Typography></InputLabel>
             <Controller 
                 control={control}
                 name="username"
@@ -104,7 +104,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                   />
                 )}
               />
-              <InputLabel htmlFor="password"><Typography variant='h3'>Password</Typography></InputLabel>
+              <InputLabel htmlFor="password"><Typography variant='h4'>Password</Typography></InputLabel>
               <Controller 
                 control={control}
                 name="password"
@@ -135,10 +135,10 @@ export default function Login({ onLoginSuccess }: LoginProps) {
               sx={{ mt: 3, mb: 2, backgroundColor: 'white', borderRadius: 50, width: 150, alignSelf:'center' }}
               className="gradient-button"
             >
-              <Typography variant="body1">Sign In</Typography>
+              <Typography variant="subtitle2" sx={{fontWeight: 500}}>Sign In</Typography>
             </Button>
             <Grid item sx={{mt: 2, alignSelf: 'center'}}>
-              <NavLink to="/signup">
+              <NavLink to="/signup" className={"signup-link"}>
                 {"Don't have an account? Sign Up"}
               </NavLink>
             </Grid>

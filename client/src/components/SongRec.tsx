@@ -1,14 +1,10 @@
-import React from "react";
 import { Song as SongModel} from "../models/song";
-import { Box, Container, CssBaseline, Grid, Typography } from "@mui/material";
+import { Box, CssBaseline, Grid, Typography } from "@mui/material";
 import { Mood as MoodModel} from "../models/mood";
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import PauseCircleOutlineIcon from '@mui/icons-material/PauseCircleOutline';
 import FastRewindIcon from '@mui/icons-material/FastRewind';
 import FastForwardIcon from '@mui/icons-material/FastForward';
-
 import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
-import { NavLink } from "react-router-dom";
 
  interface MoodRecProps {
   rec: SongModel,
@@ -37,10 +33,10 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                 justifyContent: 'center'
               }}>
               <img src={moodClicked.image} alt={moodClicked.mood} className="moodIconSmall" ></img>
-              <Typography variant="h3" sx={{mt: 2}}>YOUR MOOD IS <span style={{color:`${moodClicked.color}`}}>{moodClicked.mood.toLowerCase()}</span></Typography>
+              <Typography variant="h1" sx={{mt: 2, textAlign: 'center'}}>YOUR MOOD IS <span style={{color:`${moodClicked.color}`}}>{moodClicked.mood}</span></Typography>
             </Grid>
             <Grid item sx={{textAlign: 'center', mt: 3}}>
-              <Typography variant="body2">Listening to music has the remarkable ability to uplift spirits, evoke positive emotions, and enhance overall mood.</Typography> 
+              <Typography variant="subtitle1">Listening to music has the remarkable ability to uplift spirits, evoke positive emotions, and enhance overall mood.</Typography> 
             </Grid>
         </Grid>
 
@@ -59,8 +55,8 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
-            <Typography variant="h2">{rec.title}</Typography>
-            <Typography variant="body2" sx={{mt: 1}}>{rec.artist}</Typography>
+            <Typography variant="h2" sx={{textAlign: 'center'}}>{rec.title}</Typography>
+            <Typography variant="subtitle2" sx={{mt: 1}}>{rec.artist}</Typography>
             <Box
               sx={{
                 position: 'relative', 
@@ -85,7 +81,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
             </Box>
           </Grid>
           <Grid item>
-              <YouTubeIcon sx={{fontSize: '50px'}}/>
+              <a href={rec.link} target="_blank" rel="noreferrer" className="youtube-link"><YouTubeIcon sx={{fontSize: '50px'}}/></a>
           </Grid>
         </Grid>
       </Grid>
