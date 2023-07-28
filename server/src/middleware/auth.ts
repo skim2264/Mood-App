@@ -5,6 +5,6 @@ export const requiresAuth: RequestHandler = (req, res, next) => {
   if (req.session.userId) {
     next();
   } else {
-    next(createHttpError(401, "User not authenticated. AUTH.ts"));
+    next(createHttpError(401, "User not authenticated."));
   }
 }
