@@ -23,9 +23,11 @@ async function fetchData(input: RequestInfo, init?: RequestInit) {
   }
 }
 
+const host = "mood-app-server.railway.internal";
+
 //Authentication functions
 export async function getLoggedInUser(): Promise<User> {
-  const response = await fetchData("http://localhost:5000/api/users", { method: "GET", credentials: 'include' });
+  const response = await fetchData(`${host}/api/users`, { method: "GET", credentials: 'include' });
   return response.json();
 }
 
@@ -37,7 +39,7 @@ export interface SignUpCredentials {
 }
 
 export async function signUp(credentials: SignUpCredentials): Promise<User> {
-  const response = await fetchData("http://localhost:5000/api/users/signup", {
+  const response = await fetchData(`${host}/api/users/signup`, {
     method: "POST",
     credentials: 'include',
     headers: {
@@ -54,7 +56,7 @@ export interface LoginCredentials {
 }
 
 export async function login(credentials: LoginCredentials): Promise<User> {
-  const response = await fetchData("http://localhost:5000/api/users/login", {
+  const response = await fetchData(`${host}/api/users/login`, {
     method: "POST",
     credentials: 'include',
     headers: {
@@ -66,7 +68,7 @@ export async function login(credentials: LoginCredentials): Promise<User> {
 }
 
 export async function logout() {
-  await fetchData("http://localhost:5000/api/users/logout", { method: "POST", credentials: 'include'});
+  await fetchData(`${host}/api/users/logout`, { method: "POST", credentials: 'include'});
 }
 
 //Methods to modify user mood - may modify input to put and delete routes
@@ -76,7 +78,7 @@ export async function logout() {
 } */
 
 export async function addUserMood(userMood: string): Promise<UserMood> {
-  const response = await fetchData("http://localhost:5000/api/mood/", {
+  const response = await fetchData(`${host}/api/mood/`, {
     method: "POST",
     credentials: 'include',
     headers: {
@@ -88,7 +90,7 @@ export async function addUserMood(userMood: string): Promise<UserMood> {
 }
 
 export async function editUserMood(date:string, userMood: string): Promise<UserMood> {
-  const response = await fetchData(`http://localhost:5000/api/profile/${date}`, {
+  const response = await fetchData(`${host}/api/profile/${date}`, {
     method: "PUT",
     credentials: 'include',
     headers: {
@@ -100,7 +102,7 @@ export async function editUserMood(date:string, userMood: string): Promise<UserM
 }
 
 export async function deleteUserMood(date:string): Promise<UserMood> {
-  const response = await fetchData(`http://localhost:5000/api/profile/${date}`, {
+  const response = await fetchData(`${host}/api/profile/${date}`, {
     method: "DELETE",
     credentials: 'include',
     headers: {
@@ -112,23 +114,23 @@ export async function deleteUserMood(date:string): Promise<UserMood> {
 
 //get user mood by day
  export async function getUserMoodByDate(date:Date) {
-  const response = await fetchData(`http://localhost:5000/api/profile/date/${date}`, { method: "GET", credentials: 'include', });
+  const response = await fetchData(`${host}/api/profile/date/${date}`, { method: "GET", credentials: 'include', });
   return response.json();
 } 
 
 //get user mood by month
 export async function getUserMoodByMonth(date:Date): Promise<UserMood[]> {
-  const response = await fetchData(`http://localhost:5000/api/profile/month/${date}`, { method: "GET", credentials: 'include', });
+  const response = await fetchData(`${host}/api/profile/month/${date}`, { method: "GET", credentials: 'include', });
   return response.json();
 }
 
 //Get recommedation based on user mood
 export async function getRec(userMood: string): Promise<Advice | Song | Quote> {
-  const response = await fetchData(`http://localhost:5000/api/mood/${userMood}`, { method: "GET", credentials: 'include'});
+  const response = await fetchData(`${host}/api/mood/${userMood}`, { method: "GET", credentials: 'include'});
   return response.json();
 }
  
 export async function getUserMoodList() {
-  const response = await fetchData("http://localhost:500/api/users/moodList", { method: "GET", credentials: 'include'});
+  const response = await fetchData(`${host}/api/users/moodList`, { method: "GET", credentials: 'include'});
   return response.json();
 }
