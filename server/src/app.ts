@@ -29,7 +29,11 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
+    path: '/',
     maxAge: 60 * 60 * 1000,
+    sameSite: "none",
+    secure: true,
+    domain: "skim2264.github.io"
   },
   rolling: true,
   store: MongoStore.create({
