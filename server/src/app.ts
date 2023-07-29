@@ -37,7 +37,6 @@ app.use(session({
     secure: true,
     domain: "skim2264.github.io"
   },
-  rolling: true,
   store: MongoStore.create({
     mongoUrl: env.MONGO_URI
   })
