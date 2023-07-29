@@ -38,7 +38,7 @@ app.use(session({
 }))
 
 //routes
-app.use("Mood-App/api/mood", moodRoutes);
+app.use("/api/mood", moodRoutes);
 app.use("/api/profile", requiresAuth, profileRoutes);
 app.use("/api/users", userRoutes);
 
