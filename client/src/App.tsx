@@ -100,7 +100,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline/>
       <div className="app-div">
-        <BrowserRouter basename="/Mood-App">
+        <BrowserRouter>
           <Navbar 
             loggedInUser={loggedInUser} 
             onLogoutSuccess={() => setLoggedInUser(null)}
