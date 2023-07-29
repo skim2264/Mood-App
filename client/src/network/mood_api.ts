@@ -1,7 +1,6 @@
 import { ConflictError, UnauthorizedError } from "../errors/http_errors";
 import { User } from "../models/user";
 import { UserMood } from "../models/userMood";
-import { Mood } from "../models/mood";
 import { Advice } from "../models/advice";
 import { Quote } from "../models/quote";
 import { Song } from "../models/song";
@@ -23,7 +22,7 @@ async function fetchData(input: RequestInfo, init?: RequestInit) {
   }
 }
 
-const host = "mood-app-server.railway.internal";
+const host = "mood-app-server-production.up.railway.app";
 
 //Authentication functions
 export async function getLoggedInUser(): Promise<User> {
@@ -70,12 +69,6 @@ export async function login(credentials: LoginCredentials): Promise<User> {
 export async function logout() {
   await fetchData(`${host}/api/users/logout`, { method: "POST", credentials: 'include'});
 }
-
-//Methods to modify user mood - may modify input to put and delete routes
-/* export interface UserMoodInput {
-  day: string,
-  mood: string,
-} */
 
 export async function addUserMood(userMood: string): Promise<UserMood> {
   const response = await fetchData(`${host}/api/mood/`, {

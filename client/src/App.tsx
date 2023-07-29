@@ -8,7 +8,6 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
-import { Mood } from './models/mood';
 import { User } from "./models/user";
 import * as MoodAPI from "./network/mood_api";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -101,7 +100,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline/>
       <div className="app-div">
-        <BrowserRouter>
+        <BrowserRouter basename="/Mood-App">
           <Navbar 
             loggedInUser={loggedInUser} 
             onLogoutSuccess={() => setLoggedInUser(null)}

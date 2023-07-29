@@ -1,11 +1,9 @@
 import { Song as SongModel} from "../models/song";
-import { Box, CssBaseline, Grid, Icon, SvgIcon, Typography } from "@mui/material";
+import { Box, CssBaseline, Grid, Typography } from "@mui/material";
 import { Mood as MoodModel} from "../models/mood";
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FastRewindIcon from '@mui/icons-material/FastRewind';
 import FastForwardIcon from '@mui/icons-material/FastForward';
-import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
-import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import record from "../assets/record.jpg";
 
