@@ -77,14 +77,13 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                 filter: "opacity(80%)"
               }}>
               <Box sx={{position: 'absolute', top: '50%', transform: 'translateY(-50%)'}}>
-                <FastRewindIcon sx={{fontSize: '60px'}} color="secondary"/> 
-                <PlayArrowIcon sx={{fontSize: '60px', fontWeight: 100, border:"3px solid white", borderRadius: "50%", mx: 4}} color="secondary"/>
-                <FastForwardIcon sx={{fontSize: '60px'}} color="secondary"/> 
+                <a href={rec.link} target="_blank" rel="noreferrer" className="youtube-link">
+                  <FastRewindIcon sx={{fontSize: '60px'}} color="secondary"/> 
+                  <PlayArrowIcon sx={{fontSize: '60px', fontWeight: 100, border:"3px solid white", borderRadius: "50%", mx: 4}} color="secondary"/>
+                  <FastForwardIcon sx={{fontSize: '60px'}} color="secondary"/> 
+                </a>
               </Box>
             </Box>
-          </Grid>
-          <Grid item>
-              <a href={rec.link} target="_blank" rel="noreferrer" className="youtube-link"><YouTubeIcon sx={{fontSize: '50px'}}/></a>
           </Grid>
         </Grid>
       </Grid>
