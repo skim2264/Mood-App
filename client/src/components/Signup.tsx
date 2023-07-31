@@ -187,7 +187,7 @@ export default function Signup({onSignupSuccess}: SignupProps) {
               sx={{ mt: 3, mb: 2, backgroundColor: 'white', borderRadius: 50, width: 150, alignSelf:'center' }}
               className="gradient-button"
             >
-              <Typography variant="subtitle2" sx={{fontWeight: 500}}>Sign In</Typography>
+              <Typography variant="subtitle2" sx={{fontWeight: 500}}>Sign Up</Typography>
             </Button>
             <Grid item sx={{mt: 2, alignSelf: 'center'}}>
               <NavLink to="/login" className={"signup-link"}>
