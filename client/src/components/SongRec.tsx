@@ -1,7 +1,6 @@
 import { Song as SongModel} from "../models/song";
 import { Box, CssBaseline, Grid, Typography } from "@mui/material";
 import { Mood as MoodModel} from "../models/mood";
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import FastRewindIcon from '@mui/icons-material/FastRewind';
 import FastForwardIcon from '@mui/icons-material/FastForward';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
