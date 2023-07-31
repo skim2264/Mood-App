@@ -35,7 +35,7 @@ const EditModal = ({date}: EditModalProps) => {
   return (
     <>
       <div className="editmodal-div">
-        <Typography variant="h2" sx={{textAlign: 'center', mb: 3}}>Edit your mood</Typography>
+        <Typography variant="h1" sx={{textAlign: 'center', mb: 3}}>Edit your mood</Typography>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 3, sm: 9, md: 12 }}> 
             {moodList.map((mood) => (

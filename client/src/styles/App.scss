@@ -163,6 +163,7 @@ hr {
 //Edit Modal
 .editmodal-div {
   @extend %PageDivTemplate;
-  height: 80vh;
+  height: 100&;
   padding: 100px;
+  background: rgb(246, 243, 252);
 }
