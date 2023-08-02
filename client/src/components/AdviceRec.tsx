@@ -35,7 +35,7 @@ const AdviceRec = ({rec, moodClicked}: MoodRecProps) => {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: "0px 50px"
+            padding: "10px 50px"
         }}>
           <Box 
             sx={{
@@ -47,18 +47,33 @@ const AdviceRec = ({rec, moodClicked}: MoodRecProps) => {
               display: "flex",
               alignContent: "center",
               justifyContent: "center",
+              '@media (max-width: 600px)': {
+                width: "50px", 
+                height: "50px", 
+              }
             }}>
             <Icon
               sx={{
                 color: "#7094C3",
                 margin: "auto",
-                fontSize: "2.8rem"
+                fontSize: "2.8rem",
+                '@media (max-width: 600px)': {
+                  fontSize: "2rem"
+                }
               }}>
               {rec.image}
           </Icon>
           </Box>
           
-          <Typography variant="h3" sx={{mb: 4, mt: 2}}>{rec.title}</Typography>
+          <Typography variant="h3" 
+            sx={{
+              mb: 2, 
+              mt: 2, 
+              '@media (max-width: 600px)': {
+                  mb: 0
+              }}}>
+                {rec.title}
+          </Typography>
           <Typography variant="body1" sx={{mt: 1}}>{rec.description}</Typography>
         </Grid>
       </Grid>

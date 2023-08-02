@@ -12,6 +12,7 @@ import { User } from "../models/user";
 import InputLabel from '@mui/material/InputLabel';
 import loginImg from "../assets/dreambed.jpg";
 import Paper from '@mui/material/Paper';
+import { useEffect, useState } from 'react';
 
 interface SignupProps {
   onSignupSuccess: (user: User) => void,
@@ -19,6 +20,15 @@ interface SignupProps {
 
 export default function Signup({onSignupSuccess}: SignupProps) {
   const navigate = useNavigate();
+
+  const [screenMatch, setScreenMatch] = useState(window.matchMedia("(min-width: 600px)").matches);
+
+  useEffect(() => {
+    window
+    .matchMedia("(min-width: 600px)")
+    .addEventListener('change', e => setScreenMatch(e.matches));
+  },[]);
+
   const { control, handleSubmit} = useForm<MoodAPI.SignUpCredentials>();
 
   const signUpSubmit = async (input: MoodAPI.SignUpCredentials) => {
@@ -34,9 +44,9 @@ export default function Signup({onSignupSuccess}: SignupProps) {
   };
 
   return (
-    <Grid container component="main" sx={{ height: '100%' }}>
+    <Grid container component="main" sx={{ height: '80vh','@media (max-width: 600px)': {height: '100%'}}}>
       <CssBaseline />
-      <Grid container item xs={false} sm={6} md={5} className='loginImage'>
+      {screenMatch &&<Grid container item xs={false} sm={6} md={5} className='loginImage'>
         <Container
           sx={{
             display: 'flex',
@@ -50,8 +60,17 @@ export default function Signup({onSignupSuccess}: SignupProps) {
           <Grid item sx={{ mt: 3, fontSize: '20px', textAlign:'center'}}>"Believe you can, and you're halfway there."</Grid>
           <Grid item sx={{ fontSize: '18px', textAlign:'center'}}>-Theodore Roosevelt</Grid>
         </Container>
-      </Grid>
-      <Grid item xs={12} sm={6} md={7} component={Paper} elevation={6} square>
+      </Grid>}
+      {!screenMatch && <></>}
+
+      <Grid item xs={12} sm={6} md={7} component={Paper} elevation={6} square 
+        className="login-mobile"
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignContent: 'center'
+        }}>
         <Box
           sx={{
             my: 6,
@@ -87,13 +106,14 @@ export default function Signup({onSignupSuccess}: SignupProps) {
                     autoFocus
                     InputProps={{
                       style: {
-                        borderRadius: "50px"
+                        borderRadius: "50px",
+                        height: "50px"
                       }
                     }}
                     InputLabelProps={{
-                      style: { color: '#D0D0D0' },
+                      style: { color: '#D0D0D0', fontSize: "18px"},
                     }}
-                    sx={{mb: 3}}
+                    sx={{mb: 2}}
                   />
                 )}
               />
@@ -114,13 +134,14 @@ export default function Signup({onSignupSuccess}: SignupProps) {
                     label="Last Name"
                     InputProps={{
                       style: {
-                        borderRadius: "50px"
+                        borderRadius: "50px",
+                        height: "50px"
                       }
                     }}
                     InputLabelProps={{
-                      style: { color: '#D0D0D0' },
+                      style: { color: '#D0D0D0', fontSize: "18px" },
                     }}
-                    sx={{mb: 3}}
+                    sx={{mb: 2}}
                   />
                 )}
               />
@@ -141,13 +162,14 @@ export default function Signup({onSignupSuccess}: SignupProps) {
                     label="Username"
                     InputProps={{
                       style: {
-                        borderRadius: "50px"
+                        borderRadius: "50px",
+                        height: "50px"
                       }
                     }}
                     InputLabelProps={{
-                      style: { color: '#D0D0D0' },
+                      style: { color: '#D0D0D0', fontSize: "18px" },
                     }}
-                    sx={{mb: 3}}
+                    sx={{mb: 2}}
                   />
                 )}
               />
@@ -170,10 +192,11 @@ export default function Signup({onSignupSuccess}: SignupProps) {
                     InputProps={{
                       style: {
                         borderRadius: "50px",
+                        height: "50px"
                       }
                     }}
                     InputLabelProps={{
-                      style: { color: '#D0D0D0' },
+                      style: { color: '#D0D0D0', fontSize: "18px" },
                     }}
                   />
                 )}

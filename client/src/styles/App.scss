@@ -16,6 +16,10 @@ html, body, #root {
   padding: 100px;
   box-sizing: border-box;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .app-div::before {
@@ -73,6 +77,7 @@ span {
 
 .signup-link {
   color: variables.$link-color;
+  font-size: 24px;
 }
 
 //Buttons
@@ -100,11 +105,11 @@ span {
   @extend %PageDivTemplate;
   height: 100%;
   padding: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 500px;
 }
 
 .moodIcon {
-  width: 160px;
+  width: 150px;
 }
 
 .moodIcon:hover {
@@ -112,6 +117,12 @@ span {
 }
 
 //Rec Pages
+#moodrec {
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+}
+
 .moodrec-div {
   height: 80vh;
   font: variables.$font-color-main;
@@ -174,4 +185,75 @@ hr {
   height: 100&;
   padding: 100px;
   background: rgb(246, 243, 252);
+}
+
+/* For mobile screens */
+@media only screen and (max-width: 600px) {
+  .circleImage {
+    width: 10rem;
+  }
+
+  .welcome-link {
+    font-size: 1.2rem;
+  }
+
+  .app-div {
+    padding: 30px;
+    min-height: 100vh;
+  }
+  .login-mobile {
+    border-radius: 20px;
+    height: 100%;
+  }
+
+  .signup-link {
+    font-size: 20px;
+  }
+
+  .home-div {
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  .moodIcon {
+    width: 75px;
+  }
+
+  .moodIconSmall {
+    width: 100px;
+  }
+
+  .rec-padding {
+    padding: 15px;
+  }
+
+  .song-div-right {
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .advice-div-right {
+    border-radius: 0px 0px 20px 20px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 750px) {
+  .moodIcon {
+    width: 100px;
+  }
+
+  .home-div {
+    padding: 50px;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1024px) {
+  .moodIcon {
+    width: 130px;
+  }
+
+  .home-div {
+    padding: 100px;
+    margin-top: 50px;
+  }
 }

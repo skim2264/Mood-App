@@ -25,16 +25,25 @@ const theme = createTheme({
       fontWeight: 700,
       color: '#575757',
       fontSize: '2.5rem',
+      '@media (max-width: 600px)': {
+        fontSize: '2rem',
+      }
     },
     h2: {
       fontWeight: 500,
       color: '#FFF',
       fontSize: '2.5rem',
+      '@media (max-width: 600px)': {
+        fontSize: '2rem',
+      }
     },
     h3: {
       fontWeight: 500,
       color: '#575757',
       fontSize: '1.75rem',
+      '@media (max-width: 600px)': {
+        fontSize: '1.5rem',
+      }
     },
     h4: {
       color: '#434343',
@@ -47,7 +56,10 @@ const theme = createTheme({
       fontSize: '1.6rem',
       fontWeight: 500,
       lineHeight: 'normal',
-      textAlign: 'center'
+      textAlign: 'center',
+      '@media (max-width: 600px)': {
+        fontSize: '1.2rem',
+      }
     },
     body2: {
       color: '#434343',

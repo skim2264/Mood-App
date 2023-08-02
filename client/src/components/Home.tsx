@@ -70,9 +70,9 @@ const Home = ({loggedInUser}: HomeProps) => {
       <div className="home-div">
         <Typography variant="h1" sx={{textAlign: 'center', mb: 3}}>What's your mood today?</Typography>
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 3, sm: 9, md: 12 }}> 
+          <Grid container spacing={{ md: 5 }} columns={{ md: 12 }} sx={{display: 'flex', justifyContent: 'center'}}> 
             {moodList.map((mood) => (
-              <Grid item xs={3} key={mood.mood}>
+              <Grid item xs={3} key={mood.mood} sx={{display: 'flex', alignContent: 'center'}}>
                 <Item elevation={0} sx={{backgroundColor:"transparent"}}>
                   <img src={mood.image} alt={mood.mood} className="moodIcon" onClick={(e) => onMoodClicked(mood)}/>
                   <Typography variant="body2" sx={{fontWeight: 700}}>{capitalizeFirst(mood.mood)}</Typography>

@@ -12,6 +12,7 @@ import { User } from "../models/user";
 import Container from '@mui/material/Container';
 import loginImg from "../assets/dreambed.jpg";
 import InputLabel from '@mui/material/InputLabel';
+import { useEffect, useState } from 'react';
 
 interface LoginProps {
   onLoginSuccess: (user: User) => void,
@@ -19,6 +20,13 @@ interface LoginProps {
 
 export default function Login({ onLoginSuccess }: LoginProps) {
   const navigate = useNavigate();
+  const [screenMatch, setScreenMatch] = useState(window.matchMedia("(min-width: 600px)").matches);
+
+  useEffect(() => {
+    window
+    .matchMedia("(min-width: 600px)")
+    .addEventListener('change', e => setScreenMatch(e.matches));
+  },[]);
 
   const { control, handleSubmit} = useForm<MoodAPI.LoginCredentials>();
 
@@ -37,7 +45,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
   return (
     <Grid container component="main" sx={{ height: '80vh' }}>
       <CssBaseline />
-      <Grid container item xs={false} sm={6} md={5} className='loginImage'>
+      {screenMatch && <Grid container item xs={false} sm={6} md={5} className='loginImage'>
         <Container
           sx={{
             display: 'flex',
@@ -52,8 +60,8 @@ export default function Login({ onLoginSuccess }: LoginProps) {
           <Grid item sx={{ mt: 3, fontSize: '20px', textAlign:'center'}}>"Believe you can, and you're halfway there."</Grid>
           <Grid item sx={{ fontSize: '18px', textAlign:'center'}}>-Theodore Roosevelt</Grid>
         </Container>
-      </Grid>
-
+      </Grid>}
+      {!screenMatch && <></>}
       <Grid item xs={12} sm={6} md={7} component={Paper} elevation={6} square 
         sx={{
           display: 'flex',
@@ -61,6 +69,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
           justifyContent: 'center',
           alignContent: 'center'
         }}
+        className="login-mobile"
       >
         <Box
           sx={{
@@ -96,11 +105,12 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                     autoFocus
                     InputProps={{
                       style: {
-                        borderRadius: "50px"
+                        borderRadius: "50px",
+                        height: "50px"
                       }
                     }}
                     InputLabelProps={{
-                      style: { color: '#D0D0D0' },
+                      style: { color: '#D0D0D0', fontSize: "18px" },
                     }}
                     sx={{mb: 4}}
                   />
@@ -125,10 +135,11 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                     InputProps={{
                       style: {
                         borderRadius: "50px",
+                        height: "50px"
                       }
                     }}
                     InputLabelProps={{
-                      style: { color: '#D0D0D0' },
+                      style: { color: '#D0D0D0', fontSize: "18px" },
                     }}
                   />
                 )}
