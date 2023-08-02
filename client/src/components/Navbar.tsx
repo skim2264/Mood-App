@@ -78,8 +78,8 @@ export default function Navbar({loggedInUser, onLogoutSuccess}: NavbarProps) {
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'left' }}>
             {loggedInUser 
-              ? <NavLink to="/home" className="nav-link">mood</NavLink> 
-              : <NavLink to="/" className="nav-link">mood</NavLink> 
+              ? <NavLink to="/home" className="nav-link logo-link">mood</NavLink> 
+              : <NavLink to="/" className="nav-link logo-link">mood</NavLink> 
             }
           </Typography>
           

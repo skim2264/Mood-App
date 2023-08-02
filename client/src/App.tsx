@@ -34,7 +34,7 @@ const theme = createTheme({
     h3: {
       fontWeight: 500,
       color: '#575757',
-      fontSize: '2rem',
+      fontSize: '1.75rem',
     },
     h4: {
       color: '#434343',
@@ -63,8 +63,8 @@ const theme = createTheme({
     },
     subtitle2: {
       color: '#FFF',
-      fontSize: '1.25rem',
-      fontWeight: 400,
+      fontSize: '1rem',
+      fontWeight: 300,
     }
   },
   palette: {

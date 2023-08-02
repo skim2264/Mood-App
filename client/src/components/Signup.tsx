@@ -112,7 +112,6 @@ export default function Signup({onSignupSuccess}: SignupProps) {
                     fullWidth
                     id="lastName"
                     label="Last Name"
-                    autoFocus
                     InputProps={{
                       style: {
                         borderRadius: "50px"
@@ -140,7 +139,6 @@ export default function Signup({onSignupSuccess}: SignupProps) {
                     fullWidth
                     id="username"
                     label="Username"
-                    autoFocus
                     InputProps={{
                       style: {
                         borderRadius: "50px"
@@ -168,7 +166,6 @@ export default function Signup({onSignupSuccess}: SignupProps) {
                     fullWidth
                     id="password"
                     label="Password"
-                    autoFocus
                     type="password"
                     InputProps={{
                       style: {

@@ -15,7 +15,7 @@ const Welcome = () => {
       }}>
       <Typography variant="h2" color="secondary" sx={{mb:3}}>mood</Typography>
       <img src={loginImg} alt="Bed in the clouds" className="circleImage welcome-image"/>
-      <Typography variant="body1">"Believe you can, and you're halfway there." -Theodore Roosevelt</Typography>
+      <Typography variant="body1" sx={{mt:2}}>"Believe you can, and you're halfway there." -Theodore Roosevelt</Typography>
       <Grid container sx={{mt: 6}}>
         <Grid item xs={4}>
           <NavLink to="/home" className="welcome-link">Try now</NavLink>

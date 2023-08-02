@@ -99,6 +99,9 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                         borderRadius: "50px"
                       }
                     }}
+                    InputLabelProps={{
+                      style: { color: '#D0D0D0' },
+                    }}
                     sx={{mb: 4}}
                   />
                 )}
@@ -118,12 +121,14 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                     fullWidth
                     id="password"
                     label="Password"
-                    autoFocus
                     type="password"
                     InputProps={{
                       style: {
                         borderRadius: "50px",
                       }
+                    }}
+                    InputLabelProps={{
+                      style: { color: '#D0D0D0' },
                     }}
                   />
                 )}

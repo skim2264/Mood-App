@@ -50,8 +50,8 @@ span {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 600;
-  font-size: 1.75rem;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .welcome-image {
@@ -86,6 +86,10 @@ span {
   color: white;
 }
 
+.logo-link {
+  font-weight: 600;
+}
+
 .menu-link {
   text-decoration: none;
   color: black;
@@ -101,6 +105,10 @@ span {
 
 .moodIcon {
   width: 160px;
+}
+
+.moodIcon:hover {
+  cursor: pointer;
 }
 
 //Rec Pages

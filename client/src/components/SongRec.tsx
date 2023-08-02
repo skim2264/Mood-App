@@ -16,7 +16,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
 
   return ( 
       <Grid container component="main" className="moodrec-div-main" id="songrec">
-        <CssBaseline/>
+        <CssBaseline/> 
         <Grid container item 
           className="song-div-left rec-padding"
           sm={6} 
