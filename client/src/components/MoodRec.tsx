@@ -16,8 +16,7 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
   
   if(rec && rec.rectype === "advice") {
     return (
-      <div id="moodrec">
-        <Box className="moodrec-div">
+      <Box id="moodrec" className="moodrec-div">
           <AdviceRec rec={rec} moodClicked={moodClicked}></AdviceRec>
           {loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
@@ -30,13 +29,10 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
               <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to start tracking your mood for a better day!</Typography>
             </Container>
           }
-        </Box>
-        
-      </div>)
+        </Box>)
   } else if (rec && rec.rectype === "song") {
     return (
-      <div id="moodrec">
-        <Box className="moodrec-div">
+      <Box id="moodrec" className="moodrec-div">
           <SongRec rec={rec} moodClicked={moodClicked}></SongRec>
           {loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
@@ -49,13 +45,10 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
               <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to start tracking your mood for a better day!</Typography>
             </Container>
           }
-        </Box>
-        
-      </div>)
+        </Box>)
   } else if (rec && rec.rectype === "quote") {
     return (
-      <div id="moodrec">
-        <Box className="moodrec-div">
+      <Box id="moodrec" className="moodrec-div">
         <QuoteRec rec={rec} moodClicked={moodClicked}></QuoteRec>
         {loggedInUser &&
             <Container sx={{textAlign: 'center', mt: 3}}>
@@ -68,8 +61,7 @@ const MoodRec = ({rec, moodClicked, loggedInUser}: MoodRecProps) => {
               <Typography variant="body2"><NavLink to="/login" className="rec-login-link">Login</NavLink> to start tracking your mood for a better day!</Typography>
             </Container>
           }
-        </Box>
-      </div>)
+        </Box>)
   } else { 
     return (
       <></>

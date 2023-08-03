@@ -14,11 +14,9 @@ html, body, #root {
 .app-div {
   position: relative;
   padding: 100px;
-  box-sizing: border-box;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: center;
 }
 
@@ -49,11 +47,7 @@ span {
 
 .welcome-link {
   text-decoration: none;
-  background: #FFFFFF;
-  background: linear-gradient(to bottom, #FFFFFF 0%, #BDBDBD 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color:#DCDCDC;
   font-weight: 500;
   font-size: 1.5rem;
 }
@@ -102,6 +96,10 @@ span {
 
 //Home Page
 .home-div {
+  height: 100%;
+}
+
+.home-div-main {
   @extend %PageDivTemplate;
   height: 100%;
   padding: 100px;
@@ -117,20 +115,16 @@ span {
 }
 
 //Rec Pages
-#moodrec {
-  height: 90vh;
-  margin: 0;
-  padding: 0;
-}
-
 .moodrec-div {
   height: 80vh;
+  margin: 0;
+  padding: 0;
   font: variables.$font-color-main;
 }
 
 .moodrec-div-main {
   @extend %PageDivTemplate;
-  height: 100%;
+  height: 90%;
 }
 
 .rec-padding {
@@ -182,7 +176,7 @@ hr {
 //Edit Modal
 .editmodal-div {
   @extend %PageDivTemplate;
-  height: 100&;
+  height: 100%;
   padding: 100px;
   background: rgb(246, 243, 252);
 }
@@ -210,9 +204,13 @@ hr {
     font-size: 20px;
   }
 
-  .home-div {
+  .home-div-main {
     padding: 20px;
     margin-top: 50px;
+  }
+
+  .editmodal-div {
+    padding: 20px;
   }
   
   .moodIcon {
@@ -234,6 +232,16 @@ hr {
   .advice-div-right {
     border-radius: 0px 0px 20px 20px;
   }
+
+  .profile-div {
+    padding: 20px;
+  }
+
+  .rec-profile-link, .rec-login-link {
+    color: variables.$link-color;
+    font-weight: 600;
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 750px) {
@@ -245,6 +253,10 @@ hr {
     padding: 50px;
     margin-top: 50px;
   }
+
+  .app-div {
+    padding: 30px;
+  }
 }
 
 @media only screen and (min-width: 750px) and (max-width: 1024px) {
@@ -253,7 +265,11 @@ hr {
   }
 
   .home-div {
-    padding: 100px;
+    padding: 70px;
     margin-top: 50px;
+  }
+
+  .app-div {
+    padding: 50px;
   }
 }

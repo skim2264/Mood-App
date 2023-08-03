@@ -77,6 +77,9 @@ export default function Signup({onSignupSuccess}: SignupProps) {
             mx: 4,
             display: 'flex',
             flexDirection: 'column',
+            '@media (max-width: 600px)': {
+              my: 2
+            }
           }}
         >
           <Typography component="h1" variant="h1" sx={{mb: 2, textAlign:'left', color: '#000'}}>

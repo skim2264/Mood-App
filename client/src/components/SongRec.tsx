@@ -28,12 +28,9 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
         <Grid container item 
           className="song-div-left rec-padding"
           sm={6} 
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+          direction="column"
+          justifyContent="center"
+          alignItems="center">
             <Grid item sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -56,12 +53,9 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
         <Grid container item 
           className="song-div-right rec-padding"
           sm={6} 
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-        }}>
+          direction="column"
+          justifyContent="center"
+          alignItems="center">
           <Grid item sx={{
                 display: 'flex',
                 flexDirection: 'column',

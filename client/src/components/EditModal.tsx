@@ -37,9 +37,9 @@ const EditModal = ({date}: EditModalProps) => {
       <div className="editmodal-div">
         <Typography variant="h1" sx={{textAlign: 'center', mb: 3}}>Edit your mood</Typography>
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 3, sm: 9, md: 12 }}> 
+          <Grid container spacing={{ md: 3 }} columns={{ md: 12 }} sx={{display: 'flex', justifyContent: 'center'}}> 
             {moodList.map((mood) => (
-              <Grid item xs={3} key={mood.mood}>
+              <Grid item xs={3} key={mood.mood} sx={{display: 'flex', alignContent: 'center'}}>
                 <Item elevation={0} sx={{backgroundColor:"transparent"}}>
                   <img src={mood.image} alt={mood.mood} className="moodIcon" onClick={(e) => editUserMood(date, mood.mood)}/>
                   <Typography variant="body1">{mood.mood}</Typography>

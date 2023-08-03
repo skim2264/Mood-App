@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'react-calendar/dist/Calendar.css';
 import './styles/App.scss';
@@ -26,7 +26,7 @@ const theme = createTheme({
       color: '#575757',
       fontSize: '2.5rem',
       '@media (max-width: 600px)': {
-        fontSize: '2rem',
+        fontSize: '1.8rem',
       }
     },
     h2: {
@@ -34,7 +34,7 @@ const theme = createTheme({
       color: '#FFF',
       fontSize: '2.5rem',
       '@media (max-width: 600px)': {
-        fontSize: '2rem',
+        fontSize: '1.8rem',
       }
     },
     h3: {
@@ -42,7 +42,7 @@ const theme = createTheme({
       color: '#575757',
       fontSize: '1.75rem',
       '@media (max-width: 600px)': {
-        fontSize: '1.5rem',
+        fontSize: '1.3rem',
       }
     },
     h4: {
@@ -53,18 +53,21 @@ const theme = createTheme({
     },
     body1: {
       color: '#575757',
-      fontSize: '1.6rem',
+      fontSize: '1.4rem',
       fontWeight: 500,
       lineHeight: 'normal',
       textAlign: 'center',
       '@media (max-width: 600px)': {
-        fontSize: '1.2rem',
+        fontSize: '1rem',
       }
     },
     body2: {
       color: '#434343',
       fontSize: '1.4rem',
-      fontWeight: 600
+      fontWeight: 600,
+      '@media (max-width: 600px)': {
+        fontSize: '1rem',
+      }
     },
     subtitle1: {
       color: '#434343',
