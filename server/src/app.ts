@@ -11,11 +11,21 @@ import session from "express-session";
 import env from "./util/validateEnv";
 import MongoStore from "connect-mongo";
 import { requiresAuth } from "./middleware/auth";
-
+import compression from "compression";
+import helmet from "helmet";
+import RateLimit from "express-rate-limit";
 
 const app = express();
 
 app.use(morgan("dev"));
+
+app.use(helmet());
+const limiter = RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 20,
+});
+
+app.use(limiter);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -33,13 +43,16 @@ app.use(session({
   cookie: {
     path: '/',
     maxAge: 60 * 60 * 1000,
-    sameSite: "none",
-    secure: true,
+    secure: process.env.NODE_ENV === 'development' ? false : true,
+    httpOnly: process.env.NODE_ENV === 'development' ? false : true,
+    sameSite: process.env.NODE_ENV === 'development' ? false : 'none',
   },
   store: MongoStore.create({
     mongoUrl: env.MONGO_URI
   })
-}))
+}));
+
+app.use(compression());
 
 //routes
 app.use("/api/mood", moodRoutes);
