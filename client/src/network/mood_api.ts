@@ -22,7 +22,7 @@ async function fetchData(input: RequestInfo, init?: RequestInit) {
   }
 }
 
-const host = "http://localhost:5000";
+const host = "https://mood-app-server-production.up.railway.app";
 
 //Authentication functions
 export async function getLoggedInUser(): Promise<User> {
