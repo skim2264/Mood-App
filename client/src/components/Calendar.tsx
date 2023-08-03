@@ -33,6 +33,7 @@ const Calendar = () => {
 
   const toCurrentDate = () => {
     setCurrentDay(new Date());
+    setTriggerFetch(true);
   }
   
   useEffect(() => {
@@ -41,14 +42,15 @@ const Calendar = () => {
       try {
         const response = await MoodAPI.getUserMoodByMonth(date);
         if (response) setMonthMoods(response);
+        console.log(response);
       } catch (error) {
         console.error(error);
         alert(error);
       }
     };
-
-    getUserMoodByMonth(currentDayRef.current);
+    getUserMoodByMonth(currentDay);
     setTriggerFetch(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[triggerFetch]); 
 
 return (
