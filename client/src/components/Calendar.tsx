@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect} from 'react';
 import CalendarDays from './CalendarDays';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -15,7 +15,6 @@ const Calendar = () => {
   const [currentDay, setCurrentDay] = useState(new Date());
   const [monthMoods, setMonthMoods] = useState<UserMood[]>([]);
   const [triggerFetch, setTriggerFetch] = useState(false);
-  const currentDayRef = useRef(currentDay);
 
   const changeCurrentDay = (day: any) => {
     setCurrentDay(new Date(day.year, day.month, day.number))
@@ -42,7 +41,6 @@ const Calendar = () => {
       try {
         const response = await MoodAPI.getUserMoodByMonth(date);
         if (response) setMonthMoods(response);
-        console.log(response);
       } catch (error) {
         console.error(error);
         alert(error);
