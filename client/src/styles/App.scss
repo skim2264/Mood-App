@@ -37,12 +37,53 @@ span {
   font-style: italic;
 }
 
+// Scroll up button 
+.scrollTopDiv {
+  position: fixed;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  animation: bounce 1s infinite alternate;
+}
+
+.scrollTopButton {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  color: white;
+}
+
+.scrollTopButton:hover {
+  color: variables.$link-color;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 //Welcome Page
 .welcome-div {
   @extend %PageDivTemplate;
   @extend %PurpleGradient;
   height: 80vh;
   padding: 100px;
+  width: 100%;
 }
 
 .welcome-link {
@@ -97,6 +138,7 @@ span {
 //Home Page
 .home-div {
   height: 100%;
+  width: 100%;
 }
 
 .home-div-main {
@@ -117,6 +159,7 @@ span {
 //Rec Pages
 .moodrec-div {
   height: 80vh;
+  min-height: 700px;
   margin: 0;
   padding: 0;
   font: variables.$font-color-main;
@@ -128,7 +171,7 @@ span {
 }
 
 .rec-padding {
-  padding: 100px 50px;
+  padding: 0px 50px;
 }
 
 .rec-profile-link, .rec-login-link {
@@ -182,9 +225,13 @@ hr {
 }
 
 /* For mobile screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .circleImage {
     width: 10rem;
+  }
+
+  .welcome-div {
+    padding: 50px 20px;
   }
 
   .welcome-link {
@@ -222,7 +269,7 @@ hr {
   }
 
   .rec-padding {
-    padding: 15px;
+    padding: 10px;
   }
 
   .song-div-right {
@@ -244,7 +291,7 @@ hr {
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 750px) {
+@media only screen and (min-width: 650px) and (max-width: 750px) {
   .moodIcon {
     width: 100px;
   }
@@ -255,6 +302,10 @@ hr {
   }
 
   .app-div {
+    padding: 30px;
+  }
+
+  .rec-padding {
     padding: 30px;
   }
 }
@@ -271,5 +322,9 @@ hr {
 
   .app-div {
     padding: 50px;
+  }
+
+  .rec-padding {
+    padding: 30px;
   }
 }

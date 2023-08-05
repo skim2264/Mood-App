@@ -12,6 +12,7 @@ import { User } from "./models/user";
 import * as MoodAPI from "./network/mood_api";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 //set theme for MUI
 const theme = createTheme({
@@ -111,6 +112,26 @@ function App() {
     fetchLoggedInUser();
   },[]);
 
+  //top button appears on scroll
+  const [visible, setVisible] = useState(false);
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 200) {
+      setVisible(true);
+    } else if (scrolled <= 200) {
+      setVisible(false);
+    }
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior:'smooth'
+    })
+  }
+
+  window.addEventListener('scroll', toggleVisible);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
@@ -128,6 +149,11 @@ function App() {
             <Route path="/profile" element={<Profile></Profile>}></Route>
           </Routes>
         </BrowserRouter>
+        <div className="scrollTopDiv" style={{display: visible ? 'flex': 'none'}}>
+          <button className="scrollTopButton" id="scrollTopButton" onClick={scrollToTop}>
+            <KeyboardDoubleArrowUpIcon/>
+          </button>
+        </div>
       </div>
     </ThemeProvider>
     

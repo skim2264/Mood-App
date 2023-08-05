@@ -80,7 +80,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                 mt: 3,
                 boxShadow: "3px 4px 4px 0px rgba(0, 0, 0, 0.25)",
                 filter: "opacity(80%)",
-                '@media (max-width: 600px)': {
+                '@media (max-width: 1000px)': {
                   width: '200px',
                   height: '200px', 
                 }
@@ -90,7 +90,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                   <FastRewindIcon 
                     sx={{
                       fontSize: '60px', 
-                      '@media (max-width: 600px)': {
+                      '@media (max-width: 1000px)': {
                         fontSize: '40px'
                       }
                     }} 
@@ -102,7 +102,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                       border:"3px solid white", 
                       borderRadius: "50%", 
                       mx: 4, 
-                      '@media (max-width: 600px)': {
+                      '@media (max-width: 1000px)': {
                         fontSize: '40px'
                       }
                     }} 
@@ -110,7 +110,7 @@ const SongRec = ({rec, moodClicked}: MoodRecProps) => {
                   <FastForwardIcon 
                     sx={{
                       fontSize: '60px', 
-                      '@media (max-width: 600px)': {
+                      '@media (max-width: 1000px)': {
                         fontSize: '40px'
                       }
                     }} 

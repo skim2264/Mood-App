@@ -1,11 +1,11 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import loginImg from "../assets/dreambed.jpg";
 
 const Welcome = () => {
   
   return (
-    <Container className="welcome-div" 
+    <Box className="welcome-div" 
       sx={{
         textAlign: 'center',
         display: 'flex',
@@ -28,7 +28,7 @@ const Welcome = () => {
         </Grid>
       </Grid>
       
-    </Container>
+    </Box>
   )
 };
 
